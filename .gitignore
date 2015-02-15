@@ -1,3 +1,14 @@
+*~
+ac-comphist.dat
+auto-install/
+auto-save-list/
+bm-repository
+elpa/
+history
+kkcrc
+places
+private-sdic/
+recentf
 # Compiled
 *.elc
 
