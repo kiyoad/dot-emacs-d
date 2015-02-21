@@ -24,4 +24,3 @@
 (setq desktop-load-locked-desktop t)    ; t -- load anyway.
 (setq desktop-save t)                   ; t -- always save.
 (desktop-save-mode 1)
-(desktop-read)
