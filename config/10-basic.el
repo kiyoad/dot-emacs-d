@@ -65,7 +65,9 @@
               (seq bol "CVS" eol)           ;; CVS dirs
               )))
 (add-hook 'dired-mode-hook
-          '(lambda () (dired-omit-mode 1))) ; C-x M-o
+           '(lambda () (dired-omit-mode 1))) ; C-x M-o
+(setq dired-listing-switches "-alh")
+(setq dired-dwim-target t)
 
 (setq inhibit-startup-screen t)
 (setq initial-scratch-message "")
