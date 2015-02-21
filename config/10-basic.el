@@ -2,6 +2,7 @@
 
 (global-set-key (kbd "C-z") 'scroll-down)
 (global-set-key (kbd "C-h") 'backward-delete-char-untabify)
+(define-key isearch-mode-map (kbd "C-h") 'isearch-delete-char)
 (global-set-key (kbd "M-?") 'help-for-help)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
