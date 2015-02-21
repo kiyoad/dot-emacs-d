@@ -11,6 +11,12 @@
   (scroll-other-window '-))
 (global-set-key (kbd "C-M-z") 'my-scroll-down-other-window)
 
+(defun my-buffer-file-name ()
+  "Show current buffer file name."
+  (interactive)
+  (message (buffer-file-name)))
+(global-set-key (kbd "C-x M-b") 'my-buffer-file-name)
+
 (if (eq system-type 'darwin)
     (progn
       (defvar mac-command-modifier)
