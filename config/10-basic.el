@@ -29,6 +29,7 @@
       ))
 
 (global-hl-line-mode 1)
+(custom-set-faces '(hl-line ((t (:background "#484848"))))) ; for zenburn-theme
 
 (require 'paren)
 (setq show-paren-delay 0)
