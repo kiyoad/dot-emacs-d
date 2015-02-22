@@ -17,6 +17,6 @@
    (t
     (thing-at-point 'symbol ))))
 
-(global-set-key "\C-cwt" 'text-translator-translate-by-auto-selection)
+(global-set-key (kbd "C-c w t") 'text-translator-translate-by-auto-selection)
 
 (push '("*translated*" :stick t) popwin:special-display-config)
