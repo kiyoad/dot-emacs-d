@@ -40,6 +40,13 @@
        (package-install ,package-name))
      (require ,require-name)))
 
+(defmacro my-load-theme-in-package (theme-name package-name)
+  `(progn
+     (unless (package-installed-p ,package-name)
+       (package-refresh-contents)
+       (package-install ,package-name))
+     (load-theme ,theme-name t)))
+
 (defun add-to-load-path (&rest paths)
   (let (path)
     (dolist (path paths paths)
@@ -57,7 +64,7 @@
 (add-to-load-path "auto-install")
 
 ;; M-x package-install zenburn-theme
-(load-theme 'zenburn t)
+(my-load-theme-in-package 'zenburn 'zenburn-theme)
 
 ;; M-x package-install exec-path-from-shell
 (my-require 'exec-path-from-shell)
