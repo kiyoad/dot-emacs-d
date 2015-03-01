@@ -1,5 +1,6 @@
 ;;-*- coding: utf-8 -*-
 
-(my-require 'color-moccur)
-(setq moccur-split-word t)
-(add-to-list 'dmoccur-exclusion-mask "\\.DS_Store")
+(el-get-bundle color-moccur
+  (with-eval-after-load-feature 'color-moccur
+    (add-to-list 'dmoccur-exclusion-mask "\\.DS_Store")
+    (setq moccur-split-word t)))

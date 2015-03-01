@@ -1,6 +1,5 @@
 ;;-*- coding: utf-8 -*-
 
-;; M-x package-install smartparens
-
-(my-require-in-package 'smartparens-config 'smartparens)
-(smartparens-global-mode 1)
+(el-get-bundle! smartparens-config in smartparens
+  (with-eval-after-load-feature 'smartparens
+    (smartparens-global-mode 1)))

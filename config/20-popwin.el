@@ -1,6 +1,5 @@
 ;;-*- coding: utf-8 -*-
 
-;; M-x package-install popwin
-
-(my-require 'popwin)
+(el-get-bundle popwin)
+(require 'popwin)
 (popwin-mode 1)

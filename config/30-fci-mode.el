@@ -1,13 +1,10 @@
 ;;-*- coding: utf-8 -*-
 
-;; M-x package-install fill-column-indicator
-
-(my-require 'fill-column-indicator)
-
-(setq fci-rule-character ?!)
-(setq fci-rule-color "#808080")
-
-(global-set-key (kbd "C-c t f") 'fci-mode)
+(el-get-bundle fill-column-indicator
+  (global-set-key (kbd "C-c t f") 'fci-mode)
+  (with-eval-after-load-feature 'fill-column-indicator
+    (setq fci-rule-character ?!)
+    (setq fci-rule-color "#808080")))
 
 (add-hook 'python-mode-hook
           '(lambda ()

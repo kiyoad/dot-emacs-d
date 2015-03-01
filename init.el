@@ -3,79 +3,25 @@
 (when load-file-name
   (setq user-emacs-directory (file-name-directory load-file-name)))
 
-(setq auto-save-list-file-prefix
-      (concat user-emacs-directory "auto-save-list/.saves-"))
+(add-to-list 'load-path (locate-user-emacs-file "el-get/el-get"))
+(unless (require 'el-get nil 'noerror)
+  (with-current-buffer
+      (url-retrieve-synchronously
+       "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
+    (goto-char (point-max))
+    (eval-print-last-sexp)))
+(el-get-bundle tarao/with-eval-after-load-feature-el)
 
-(set-language-environment "Japanese")
-(prefer-coding-system 'utf-8)
-(when (eq system-type 'darwin)
-  (setq use-dialog-box nil)
-  (require 'ucs-normalize)
-  (set-file-name-coding-system 'utf-8-hfs)
-  (setq locale-coding-system 'utf-8-hfs))
-(when (eq window-system 'w32)
-  (set-file-name-coding-system 'cp932)
-  (setq locale-coding-system 'cp932))
+(el-get-bundle color-theme-zenburn
+  (load-theme 'zenburn t))
 
-(require 'package)
-(add-to-list 'package-archives
-             '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
-(add-to-list 'package-archives
-	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives
-             '("ELPA" . "http://tromey.com/elpa/"))
-(package-initialize)
+(el-get-bundle exec-path-from-shell
+  (exec-path-from-shell-initialize))
 
-(defmacro my-require (package-name)
-  `(progn
-     (unless (package-installed-p ,package-name)
-       (package-refresh-contents)
-       (package-install ,package-name))
-     (require ,package-name)))
+(el-get-bundle auto-async-byte-compile
+  (setq auto-async-byte-compile-exclude-files-regexp "/junk/\\|init.el")
+  (add-hook 'emacs-lisp-mode-hook 'enable-auto-async-byte-compile-mode))
 
-(defmacro my-require-in-package (require-name package-name)
-  `(progn
-     (unless (package-installed-p ,package-name)
-       (package-refresh-contents)
-       (package-install ,package-name))
-     (require ,require-name)))
-
-(defmacro my-load-theme-in-package (theme-name package-name)
-  `(progn
-     (unless (package-installed-p ,package-name)
-       (package-refresh-contents)
-       (package-install ,package-name))
-     (load-theme ,theme-name t)))
-
-(defun add-to-load-path (&rest paths)
-  (let (path)
-    (dolist (path paths paths)
-      (let ((default-directory
-	      (expand-file-name (concat user-emacs-directory path))))
-	(add-to-list 'load-path default-directory)
-	(if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-	    (normal-top-level-add-subdirs-to-load-path))))))
-
-;; M-x list-package auto-install
-(setq auto-install-directory (concat user-emacs-directory "auto-install/"))
-(my-require 'auto-install)
-(auto-install-update-emacswiki-package-name t)
-(auto-install-compatibility-setup)
-(add-to-load-path "auto-install")
-
-;; M-x package-install zenburn-theme
-(my-load-theme-in-package 'zenburn 'zenburn-theme)
-
-;; M-x package-install exec-path-from-shell
-(my-require 'exec-path-from-shell)
-(exec-path-from-shell-initialize)
-
-;; M-x package-install auto-async-byte-compile
-(my-require 'auto-async-byte-compile)
-(setq auto-async-byte-compile-exclude-files-regexp "/junk/\\|/config/\\|init.el")
-(add-hook 'emacs-lisp-mode-hook 'enable-auto-async-byte-compile-mode)
-
-;; M-x package-install init-loader
-(my-require 'init-loader)
-(init-loader-load (concat user-emacs-directory "config"))
+(el-get-bundle init-loader
+  (init-loader-load (concat user-emacs-directory "config")))
 

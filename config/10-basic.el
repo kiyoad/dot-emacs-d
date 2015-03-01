@@ -1,5 +1,16 @@
 ;;-*- coding: utf-8 -*-
 
+(set-language-environment "Japanese")
+(prefer-coding-system 'utf-8)
+(when (eq system-type 'darwin)
+  (setq use-dialog-box nil)
+  (require 'ucs-normalize)
+  (set-file-name-coding-system 'utf-8-hfs)
+  (setq locale-coding-system 'utf-8-hfs))
+(when (eq window-system 'w32)
+  (set-file-name-coding-system 'cp932)
+  (setq locale-coding-system 'cp932))
+
 (global-set-key (kbd "C-z") 'scroll-down)
 (global-set-key (kbd "C-h") 'backward-delete-char-untabify)
 (define-key isearch-mode-map (kbd "C-h") 'isearch-delete-char)
@@ -102,3 +113,6 @@
 (find-function-setup-keys)              ; C-x F OR C-x V OR C-x K
 
 (put 'narrow-to-region 'disabled nil)
+
+(setq auto-save-list-file-prefix
+      (concat user-emacs-directory "auto-save-list/.saves-"))

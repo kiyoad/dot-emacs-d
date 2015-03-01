@@ -1,4 +1,4 @@
 ;;-*- coding: utf-8 -*-
 
-(my-require-in-package 'auto-complete-config 'auto-complete)
-(ac-config-default)
+(el-get-bundle! auto-complete-config in auto-complete
+  (ac-config-default))
