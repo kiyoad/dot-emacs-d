@@ -19,8 +19,9 @@
   (exec-path-from-shell-initialize))
 
 (el-get-bundle auto-async-byte-compile
-  (setq auto-async-byte-compile-exclude-files-regexp "/junk/\\|init.el")
-  (add-hook 'emacs-lisp-mode-hook 'enable-auto-async-byte-compile-mode))
+  (add-hook 'emacs-lisp-mode-hook 'enable-auto-async-byte-compile-mode)
+  (with-eval-after-load-feature 'auto-async-byte-compile
+    (setq auto-async-byte-compile-exclude-files-regexp "/junk/\\|/config/\\|init.el")))
 
 (el-get-bundle init-loader
   (init-loader-load (concat user-emacs-directory "config")))
