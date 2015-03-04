@@ -14,6 +14,8 @@ kkcrc
 places
 private-sdic/
 recentf
+tutorial/
+url/
 # Compiled
 *.elc
 
