@@ -16,3 +16,7 @@
                              (helm-candidates-in-buffer (helm-get-current-source)))))
                    (volatile) (match identity)))
        source)))
+
+(with-eval-after-load "helm-swoop"
+  (define-key helm-swoop-map (kbd "C-s") 'helm-next-line)
+  (define-key helm-swoop-map (kbd "C-r") 'helm-previous-line))
