@@ -21,7 +21,8 @@
 (el-get-bundle auto-async-byte-compile)
 (require 'auto-async-byte-compile)
 (add-hook 'emacs-lisp-mode-hook 'enable-auto-async-byte-compile-mode)
-(setq auto-async-byte-compile-exclude-files-regexp "/junk/\\|/config/\\|init.el")
+(setq auto-async-byte-compile-exclude-files-regexp
+      "/junk/\\|/config/\\|init.el\\|/el-get/")
 
 (el-get-bundle init-loader
   (init-loader-load (concat user-emacs-directory "config")))
