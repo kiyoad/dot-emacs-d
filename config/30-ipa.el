@@ -1,5 +1,9 @@
 ;;-*- coding: utf-8 -*-
 
+(defface my/ipa-highlight
+  '((t :background "orange" :foreground "black" ))
+  "IPA mode highlight")
+
 (el-get-bundle ipa
   (global-set-key (kbd "C-c i i") 'ipa-insert)
   (global-set-key (kbd "C-c i e") 'ipa-edit)
@@ -10,6 +14,7 @@
   (global-set-key (kbd "C-c i s") 'ipa-show)
   (with-eval-after-load-feature 'ipa
     (setq ipa-file-function 'ipa-get-directory-file)
+    (setq ipa-annotation-face 'my/ipa-highlight)
     (setq ipa-overriding-map
       (let ((map (make-sparse-keymap)))
         (define-key map (kbd "C-b") 'ipa-move-left)
