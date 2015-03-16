@@ -4,4 +4,4 @@
 
 (el-get-bundle hiwin
   (hiwin-activate)
-  (set-face-background 'hiwin-face "gray10"))
+  (set-face-background 'hiwin-face "#707070"))
