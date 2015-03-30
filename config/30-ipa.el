@@ -17,6 +17,7 @@
       (concat user-emacs-directory ".ipa"))
     (setq ipa-file-function 'my/ipa-get-global-file)
     (setq ipa-annotation-face 'my/ipa-highlight)
+    (define-key ipa-mode-map (kbd "C-m") 'ipa-go-to-annotation)
     (setq ipa-overriding-map
       (let ((map (make-sparse-keymap)))
         (define-key map (kbd "C-b") 'ipa-move-left)
