@@ -9,6 +9,9 @@
 (add-to-list 'load-path "/usr/local/share/gtags")
 (require 'gtags)
 
+(with-eval-after-load 'gtags
+  (define-key gtags-mode-map "\C-t" nil))
+
 (defvar my-gtags-command)
 (setq-default my-gtags-command "gtags")
 (make-variable-buffer-local 'my-gtags-command)
