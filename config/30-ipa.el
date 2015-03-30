@@ -13,7 +13,9 @@
   (global-set-key (kbd "C-c i t") 'ipa-toggle)
   (global-set-key (kbd "C-c i s") 'ipa-show)
   (with-eval-after-load-feature 'ipa
-    (setq ipa-file-function 'ipa-get-directory-file)
+    (defun my/ipa-get-global-file ()
+      (concat user-emacs-directory ".ipa"))
+    (setq ipa-file-function 'my/ipa-get-global-file)
     (setq ipa-annotation-face 'my/ipa-highlight)
     (setq ipa-overriding-map
       (let ((map (make-sparse-keymap)))
