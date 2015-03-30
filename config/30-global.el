@@ -79,5 +79,5 @@
 
 (add-hook 'python-mode-hook
           '(lambda ()
-             (setq my-gtags-command "ecgtags")
+             (setq my-gtags-command "pygtags")
              (gtags-mode 1)))
