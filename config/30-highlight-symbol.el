@@ -8,4 +8,4 @@
 (global-set-key (kbd "M-)") 'highlight-symbol-next)
 ;; (global-set-key [(meta f3)] 'highlight-symbol-query-replace)
 (custom-set-faces
- '(highlight-symbol-face ((t (:background "#401000")))))
+ '(highlight-symbol-face ((t (:background "#0000FF")))))
