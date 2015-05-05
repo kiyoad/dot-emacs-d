@@ -5,7 +5,8 @@
   (global-set-key (kbd "C-c w t") 'text-translator-translate-by-auto-selection)
   (require 'text-translator)
   (with-eval-after-load-feature 'text-translator
-    (setq text-translator-default-engine "freetranslation.com_enja")
+    ;; (setq text-translator-default-engine "freetranslation.com_enja")
+    (setq text-translator-default-engine "fresheye.com_enja")
     (setq text-translator-auto-selection-func
           'text-translator-translate-by-auto-selection-enja)
     (defun text-translator-region-or-read-string (&optional prompt)
