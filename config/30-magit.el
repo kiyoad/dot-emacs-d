@@ -8,7 +8,6 @@
   (with-eval-after-load-feature 'magit
     (define-key magit-mode-map (kbd "M-l") 'l-all)
     (define-key magit-status-mode-map (kbd "q") 'my/magit-quit-session)))
-(el-get-bundle git-commit-mode)
 (el-get-bundle mo-git-blame
   (global-set-key (kbd "C-x v g") 'mo-git-blame-current))
 
