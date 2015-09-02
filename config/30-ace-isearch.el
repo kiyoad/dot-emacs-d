@@ -1,5 +1,6 @@
 ;;-*- coding: utf-8 -*-
 
+(el-get-bundle avy)
 (el-get-bundle ace-isearch)
 (require 'ace-isearch)
 (global-ace-isearch-mode 1)
