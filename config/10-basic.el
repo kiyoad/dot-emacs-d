@@ -88,12 +88,6 @@
 (setq frame-title-format
       (format "%%f - Emacs@%s" (system-name)))
 
-;;(global-linum-mode t)
-;; (set-face-attribute 'linum nil
-;;                     :foreground "#800"
-;;                     :height 0.9)
-;;(setq linum-format "%5d")
-
 (setq-default show-trailing-whitespace t)
 (set-face-background 'trailing-whitespace "#b14770")
 
