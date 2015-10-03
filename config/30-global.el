@@ -3,8 +3,8 @@
 (setq gtags-prefix-key "\C-cg")
 (setq gtags-suggested-key-mapping t)
 (setq gtags-read-only t)
-(setq gtags-pop-delete t)
-(setq gtags-select-buffer-single t)
+(setq gtags-pop-delete nil)
+(setq gtags-select-buffer-single nil)
 
 (add-to-list 'load-path "/usr/local/share/gtags")
 (require 'gtags)
