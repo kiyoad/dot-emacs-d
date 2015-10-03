@@ -10,10 +10,4 @@
 (custom-set-faces
  '(highlight-symbol-face ((t (:background "#0000FF")))))
 
-(add-hook 'emacs-lisp-mode-hook 'highlight-symbol-mode)
-(add-hook 'lisp-interaction-mode-hook 'highlight-symbol-mode)
-(add-hook 'lisp-mode-hook 'highlight-symbol-mode)
-(add-hook 'ielm-mode-hook 'highlight-symbol-mode)
-(add-hook 'python-mode-hook 'highlight-symbol-mode)
-(add-hook 'c-mode-common-hook 'highlight-symbol-mode)
-
+(add-hook 'prog-mode-hook 'highlight-symbol-mode)
