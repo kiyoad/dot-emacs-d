@@ -1,7 +1,6 @@
 ;;-*- coding: utf-8 -*-
 
 (el-get-bundle helm-swoop)
-(el-get-bundle helm-migemo)
 (with-eval-after-load "helm-swoop"
   (define-key helm-swoop-map (kbd "C-s") 'helm-next-line)
   (define-key helm-swoop-map (kbd "C-r") 'helm-previous-line)
