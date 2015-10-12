@@ -17,6 +17,7 @@ private-sdic/
 recentf
 tutorial/
 url/
+semanticdb/
 # Compiled
 *.elc
 
