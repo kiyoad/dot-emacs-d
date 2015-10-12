@@ -1,13 +1,11 @@
 ;;-*- coding: utf-8 -*-
 
-;; (setq highlight-symbol-mode t)
+;; http://rubikitch.com/2015/10/07/highlight-symbol/
+
 (el-get-bundle highlight-symbol)
-(require 'highlight-symbol)
-;; (global-set-key (kbd "C-M-SPC") 'highlight-symbol-at-point)
-(global-set-key (kbd "M-(") 'highlight-symbol-prev)
-(global-set-key (kbd "M-)") 'highlight-symbol-next)
-;; (global-set-key [(meta f3)] 'highlight-symbol-query-replace)
+(setq highlight-symbol-idle-delay 1.0)
+(global-set-key (kbd "M-s h R") 'highlight-symbol-query-replace)
 (custom-set-faces
  '(highlight-symbol-face ((t (:background "#0000FF")))))
-
 (add-hook 'prog-mode-hook 'highlight-symbol-mode)
+(add-hook 'prog-mode-hook 'highlight-symbol-nav-mode)
