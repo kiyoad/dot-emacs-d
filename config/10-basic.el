@@ -15,7 +15,7 @@
 (global-set-key (kbd "C-h") 'backward-delete-char-untabify)
 (define-key isearch-mode-map (kbd "C-h") 'isearch-delete-char)
 (global-set-key (kbd "M-?") 'help-for-help)
-(global-set-key (kbd "C-x C-b") 'ibuffer)
+(global-set-key (kbd "C-x C-b") 'ibuffer-list-buffers)
 
 (defun my-scroll-down-other-window ()
   "Scroll next window downward by nearly full screen."
