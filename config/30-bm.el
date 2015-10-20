@@ -29,4 +29,4 @@
   (bm-toggle)
   (when (eq last-command 'bm-toggle-or-helm)
     (helm-bm)))
-(global-set-key (kbd "M-SPC") 'bm-toggle-or-helm)
+(global-set-key (kbd "M-\\") 'bm-toggle-or-helm)
