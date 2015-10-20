@@ -88,9 +88,6 @@
 (setq frame-title-format
       (format "%%f - Emacs@%s" (system-name)))
 
-(setq-default show-trailing-whitespace t)
-(set-face-background 'trailing-whitespace "#b14770")
-
 (setq-default line-spacing 3)
 
 (delete-selection-mode 1)
