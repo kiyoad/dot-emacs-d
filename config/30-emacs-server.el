@@ -1,5 +1,6 @@
 ;;-*- coding: utf-8 -*-
 
+(setq server-socket-dir "~/.emacs.d")
 (server-start)
 (defun my-kill-emacs ()
   (interactive)
