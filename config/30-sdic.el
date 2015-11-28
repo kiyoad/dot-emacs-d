@@ -1,6 +1,5 @@
 ;;-*- coding: utf-8 -*-
 
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/sdic")
 (require 'sdic)
 
 (defmacro sdic-set-eiwa-dictionary (dictionary-path)
