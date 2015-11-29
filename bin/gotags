@@ -1,0 +1,5 @@
+#!/bin/bash
+echo $* > /opt/go/bin/gotags.log
+winpath=$(cygpath -w $1)
+echo ${winpath} >> /opt/go/bin/gotags.log
+/opt/go/bin/gotags ${winpath}

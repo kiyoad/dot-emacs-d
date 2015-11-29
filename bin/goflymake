@@ -1,0 +1,6 @@
+#!/bin/bash
+echo $* > /opt/go/bin/goflymake.log
+winpath=$(cygpath -w $3)
+echo ${winpath} >> /opt/go/bin/goflymake.log
+/opt/go/bin/goflymake $1 $2 ${winpath}
+exit 0
