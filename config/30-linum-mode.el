@@ -4,7 +4,7 @@
 ;; (set-face-attribute 'linum nil
 ;;                     :foreground "#800"
 ;;                     :height 0.9)
-(setq linum-format "%5d")
+(setq linum-format "%5d ")
 (add-hook 'prog-mode-hook
           '(lambda ()
              (linum-mode 1)
