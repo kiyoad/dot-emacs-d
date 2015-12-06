@@ -21,7 +21,7 @@
         'load-path (concat my-gopath "/src/github.com/dougm/goflymake"))
        (require 'go-flycheck)
        (add-hook 'go-mode-hook 'flycheck-mode)
-       (el-get-bundle elpa:go-eldoc     ; use github.com/nsf/gocode
+       (el-get-bundle go-eldoc          ; use github.com/nsf/gocode
          (add-hook 'go-mode-hook 'go-eldoc-setup))
        (el-get-bundle direx)
        (el-get-bundle
