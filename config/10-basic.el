@@ -50,7 +50,7 @@
 (require 'time)
 (setq display-time-day-and-date t)
 (setq display-time-24hr-format t)
-(setq display-time-format "%m/%d %H:%M")
+(setq display-time-format "%m/%d(%a) %H:%M")
 (display-time-mode t)
 
 (setq-default indent-tabs-mode nil)
