@@ -7,9 +7,6 @@
   (require 'ucs-normalize)
   (set-file-name-coding-system 'utf-8-hfs)
   (setq locale-coding-system 'utf-8-hfs))
-(when (eq window-system 'w32)
-  (set-file-name-coding-system 'cp932)
-  (setq locale-coding-system 'cp932))
 
 (global-set-key (kbd "C-z") 'scroll-down)
 (global-set-key (kbd "C-h") 'backward-delete-char-untabify)
