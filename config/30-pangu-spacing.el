@@ -2,7 +2,7 @@
 
 ;; http://rubikitch.com/2015/02/04/pangu-spacing/
 
-(el-get-bundle pangu-spacing
+(el-get-bundle elpa:pangu-spacing
 ;;; chinse-two-byte→japaneseに置き換えるだけで日本語でも使える
   (setq pangu-spacing-chinese-before-english-regexp
         (rx (group-n 1 (category japanese))

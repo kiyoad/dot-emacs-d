@@ -6,6 +6,7 @@
   (add-hook 'python-mode-hook 'flycheck-mode)
   (with-eval-after-load-feature 'flycheck
     (custom-set-variables '(flycheck-display-errors-function #'flycheck-pos-tip-error-messages))))
+(el-get-bundle syohex/pos-tip)
 (el-get-bundle flycheck-pos-tip
   (defun my-flycheck-pos-tip-show (messages)
     (pos-tip-show (mapconcat #'identity messages "\n")
