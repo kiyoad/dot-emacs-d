@@ -21,4 +21,4 @@
         (t (apply orig strlist))))
 (advice-add 'bbyac--display-matches :around 'bbyac--display-matches--use-ido)
 (bbyac-global-mode 1)
-(define-key bbyac-mode-map (kbd "C-t") 'bbyac-expand-symbols)
+(setq ido-vertical-define-keys 'C-n-C-p-up-down-left-right)
