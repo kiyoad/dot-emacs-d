@@ -22,3 +22,10 @@
   "Execute command only if CANDIDATE exists"
   (when (file-exists-p candidate)
         ad-do-it))
+
+(defun my-witch-to-buffer-other-window ()
+  (interactive)
+  (switch-to-buffer-other-window nil)
+  (switch-to-buffer nil)
+  (helm-multi-files))
+(global-set-key (kbd "C-x 4 b") 'my-witch-to-buffer-other-window)
