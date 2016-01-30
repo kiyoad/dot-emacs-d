@@ -23,9 +23,15 @@
   (when (file-exists-p candidate)
         ad-do-it))
 
-(defun my-witch-to-buffer-other-window ()
+(defun my-switch-to-buffer-other-window ()
   (interactive)
-  (switch-to-buffer-other-window nil)
-  (switch-to-buffer nil)
-  (helm-multi-files))
-(global-set-key (kbd "C-x 4 b") 'my-witch-to-buffer-other-window)
+  (let ((config (current-window-configuration))
+        (my-another-window (funcall split-window-preferred-function)))
+    (unless (with-local-quit
+              (if my-another-window
+                  (select-window my-another-window)
+                (switch-to-buffer-other-window nil)
+                (switch-to-buffer nil))
+              (helm-multi-files))
+      (set-window-configuration config))))
+(global-set-key (kbd "C-x 4 b") 'my-switch-to-buffer-other-window)
