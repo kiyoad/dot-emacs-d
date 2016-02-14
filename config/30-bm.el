@@ -21,7 +21,8 @@
 (el-get-bundle helm-bm
   (with-eval-after-load-feature 'helm-bm
     (push '(migemo) helm-source-bm)
-    (setq helm-source-bm (delete '(multiline) helm-source-bm))))
+    (setq helm-source-bm (delete '(multiline) helm-source-bm))
+    (add-to-list 'helm-for-files-preferred-list 'helm-source-bm)))
 
 (defun bm-toggle-or-helm ()
   "2回連続で起動したらhelm-bmを実行させる"
