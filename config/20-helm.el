@@ -2,6 +2,9 @@
 
 (el-get-bundle helm)
 
+(setq recentf-max-saved-items 512)
+(el-get-bundle recentf-ext)
+
 (require 'helm)
 (require 'helm-config)
 (require 'helm-files)
