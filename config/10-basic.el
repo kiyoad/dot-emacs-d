@@ -14,6 +14,29 @@
 (global-set-key (kbd "M-?") 'help-for-help)
 (global-set-key (kbd "C-x C-b") 'ibuffer-list-buffers)
 
+(defun my-toggle-buffer ()
+  "Switch to last buffer."
+  (interactive)
+  (switch-to-buffer nil))
+
+(global-set-key (kbd "C-t") 'my-toggle-buffer)
+(with-eval-after-load 'ibuffer
+  (define-key ibuffer-mode-map (kbd "C-t") nil))
+(with-eval-after-load 'dired
+  (define-key dired-mode-map "\C-td" nil)
+  (define-key dired-mode-map "\C-tt" nil)
+  (define-key dired-mode-map "\C-tr" nil)
+  (define-key dired-mode-map "\C-tj" nil)
+  (define-key dired-mode-map "\C-ti" nil)
+  (define-key dired-mode-map "\C-tx" nil)
+  (define-key dired-mode-map "\C-ta" nil)
+  (define-key dired-mode-map "\C-t." nil)
+  (define-key dired-mode-map "\C-tc" nil)
+  (define-key dired-mode-map "\C-tf" nil)
+  (define-key dired-mode-map "\C-t\C-t" nil)
+  (define-key dired-mode-map "\C-te" nil)
+  (define-key dired-mode-map "\C-t" 'my-toggle-buffer))
+
 (defun my-scroll-down-other-window ()
   "Scroll next window downward by nearly full screen."
   (interactive)
