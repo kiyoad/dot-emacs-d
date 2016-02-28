@@ -1,5 +1,7 @@
 ;;-*- coding: utf-8 -*-
 
+(require 'misc)
+
 (set-language-environment "Japanese")
 (prefer-coding-system 'utf-8)
 (when (eq system-type 'darwin)
@@ -13,6 +15,7 @@
 (define-key isearch-mode-map (kbd "C-h") 'isearch-delete-char)
 (global-set-key (kbd "M-?") 'help-for-help)
 (global-set-key (kbd "C-x C-b") 'ibuffer-list-buffers)
+(global-set-key (kbd "M-f") 'forward-to-word)
 
 (defun my-toggle-buffer ()
   "Switch to last buffer."
