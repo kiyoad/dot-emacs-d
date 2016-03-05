@@ -9,7 +9,7 @@
 (require 'helm-config)
 (require 'helm-files)
 
-(bind-key "M-x"     'helm-M-x)
+;;(bind-key "M-x"     'helm-M-x)
 (bind-key "C-x C-z" 'helm-resume)
 (setq max-specpdl-size 3000)            ; for imenu
 (bind-key "C-x C-y" 'helm-semantic-or-imenu)
