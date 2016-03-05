@@ -2,5 +2,5 @@
 
 (el-get-bundle elpa:redo+
   (require 'redo+)
-  (global-set-key (kbd "C-M-/") 'redo)
-  (global-set-key (kbd "C-M-_") 'redo))
+  (bind-key "C-M-/" 'redo)
+  (bind-key "C-M-_" 'redo))

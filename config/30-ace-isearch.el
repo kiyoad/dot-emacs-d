@@ -8,4 +8,4 @@
 (setq ace-isearch-func-delay 2.0)
 (setq ace-isearch-input-length 64)
 (el-get-bundle isearch-dabbrev
-  (define-key isearch-mode-map (kbd "C-i") 'isearch-dabbrev-expand))
+  (bind-key "C-i" 'isearch-dabbrev-expand isearch-mode-map))

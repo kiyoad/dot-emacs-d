@@ -10,12 +10,12 @@
   (set-file-name-coding-system 'utf-8-hfs)
   (setq locale-coding-system 'utf-8-hfs))
 
-(global-set-key (kbd "C-z") 'scroll-down)
-(global-set-key (kbd "C-h") 'backward-delete-char-untabify)
-(define-key isearch-mode-map (kbd "C-h") 'isearch-delete-char)
-(global-set-key (kbd "M-?") 'help-for-help)
-(global-set-key (kbd "C-x C-b") 'ibuffer-list-buffers)
-(global-set-key (kbd "M-f") 'forward-to-word)
+(bind-key "C-z" 'scroll-down)
+(bind-key "C-h" 'backward-delete-char-untabify)
+(bind-key "C-h" 'isearch-delete-char isearch-mode-map)
+(bind-key "M-?" 'help-for-help)
+(bind-key "C-x C-b" 'ibuffer-list-buffers)
+(bind-key "M-f" 'forward-to-word)
 
 (winner-mode 1)
 (defun my-winner-undo (n)
@@ -26,35 +26,19 @@
     (winner-undo)
     (setq this-command 'winner-undo)))
 
-(global-set-key (kbd "C-t") 'my-winner-undo)
-(with-eval-after-load 'ibuffer
-  (define-key ibuffer-mode-map (kbd "C-t") nil))
-(with-eval-after-load 'dired
-  (define-key dired-mode-map "\C-td" nil)
-  (define-key dired-mode-map "\C-tt" nil)
-  (define-key dired-mode-map "\C-tr" nil)
-  (define-key dired-mode-map "\C-tj" nil)
-  (define-key dired-mode-map "\C-ti" nil)
-  (define-key dired-mode-map "\C-tx" nil)
-  (define-key dired-mode-map "\C-ta" nil)
-  (define-key dired-mode-map "\C-t." nil)
-  (define-key dired-mode-map "\C-tc" nil)
-  (define-key dired-mode-map "\C-tf" nil)
-  (define-key dired-mode-map "\C-t\C-t" nil)
-  (define-key dired-mode-map "\C-te" nil)
-  (define-key dired-mode-map "\C-t" 'my-winner-undo))
+(bind-key* "C-t" 'my-winner-undo)
 
 (defun my-scroll-down-other-window ()
   "Scroll next window downward by nearly full screen."
   (interactive)
   (scroll-other-window '-))
-(global-set-key (kbd "C-M-z") 'my-scroll-down-other-window)
+(bind-key "C-M-z" 'my-scroll-down-other-window)
 
 (defun my-buffer-file-name ()
   "Show current buffer file name."
   (interactive)
   (message (buffer-file-name)))
-(global-set-key (kbd "C-x M-b") 'my-buffer-file-name)
+(bind-key "C-x M-b" 'my-buffer-file-name)
 
 (if (eq system-type 'darwin)
     (progn
@@ -97,7 +81,7 @@
 (ffap-bindings)
 
 (require 'dired-x)
-(define-key dired-mode-map "r" 'wdired-change-to-wdired-mode)
+(bind-key "r" 'wdired-change-to-wdired-mode dired-mode-map)
 (setq dired-omit-files
       (rx (or (seq bol (? ".") "#")         ;; emacs autosave files
               (seq bol "." (not (any "."))) ;; dot-files

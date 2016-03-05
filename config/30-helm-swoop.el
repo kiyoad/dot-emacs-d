@@ -2,8 +2,8 @@
 
 (el-get-bundle helm-swoop)
 (with-eval-after-load "helm-swoop"
-  (define-key helm-swoop-map (kbd "C-s") 'helm-next-line)
-  (define-key helm-swoop-map (kbd "C-r") 'helm-previous-line)
+  (bind-key "C-s" 'helm-next-line     helm-swoop-map)
+  (bind-key "C-r" 'helm-previous-line helm-swoop-map)
   (defun helm-swoop-from-isearch ()
     "Invoke `helm-swoop' from isearch."
     (interactive)

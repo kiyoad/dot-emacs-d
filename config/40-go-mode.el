@@ -9,7 +9,7 @@
 
 (el-get-bundle helm-go-package
   (with-eval-after-load 'go-mode
-    (define-key go-mode-map (kbd "C-c C-a") 'helm-go-package)))
+    (bind-key "C-c C-a" 'helm-go-package go-mode-map)))
 
 (setq my-gopath "/opt/go")
 
@@ -27,8 +27,7 @@
        (el-get-bundle
          syohex/emacs-go-direx        ; use github.com/jstemmer/gotags
          (with-eval-after-load 'go-mode
-           (define-key go-mode-map (kbd "C-c C-j")
-             'go-direx-pop-to-buffer))
+           (bind-key "C-c C-j" 'go-direx-pop-to-buffer go-mode-map))
          (push '("^\*go-direx:" :regexp t :position left :width 0.4
                  :dedicated t :stick t)
                popwin:special-display-config))

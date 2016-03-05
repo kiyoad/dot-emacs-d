@@ -81,16 +81,16 @@
 (eval-after-load 'quail
   '(progn
      (defadvice quail-define-package (before my-quail-define-package activate)
-       (define-key quail-translation-keymap (kbd "C-h") 'quail-delete-last-char)
-       (define-key quail-translation-keymap (kbd "C-?") 'quail-translation-help)
-       (define-key quail-simple-translation-keymap (kbd "C-h") 'quail-delete-last-char)
-       (define-key quail-simple-translation-keymap (kbd "C-?") 'quail-translation-help)
-       (define-key quail-conversion-keymap (kbd "C-h") 'quail-conversion-backward-delete-char)
-       (define-key quail-conversion-keymap (kbd "C-?") 'quail-translation-help))))
+       (bind-key "C-h" 'quail-delete-last-char quail-translation-keymap)
+       (bind-key "C-?" 'quail-translation-help quail-translation-keymap)
+       (bind-key "C-h" 'quail-delete-last-char quail-simple-translation-keymap)
+       (bind-key "C-?" 'quail-translation-help quail-simple-translation-keymap)
+       (bind-key "C-h" 'quail-conversion-backward-delete-char quail-conversion-keymap)
+       (bind-key "C-?" 'quail-translation-help                quail-conversion-keymap))))
 
 (eval-after-load 'kkc
   '(progn
-     (define-key kkc-keymap (kbd "C-a") 'kkc-cancel)
-     (define-key kkc-keymap (kbd "C-e") 'kkc-cancel)
-     (define-key kkc-keymap (kbd "C-h") 'kkc-cancel)
-     (define-key kkc-keymap (kbd "C-?") 'kkc-help)))
+     (bind-key "C-a" 'kkc-cancel kkc-keymap)
+     (bind-key "C-e" 'kkc-cancel kkc-keymap)
+     (bind-key "C-h" 'kkc-cancel kkc-keymap)
+     (bind-key "C-?" 'kkc-help   kkc-keymap)))

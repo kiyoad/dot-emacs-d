@@ -10,7 +10,7 @@
 (require 'gtags)
 
 (with-eval-after-load 'gtags
-  (define-key gtags-mode-map "\C-t" nil))
+  (bind-key "C-t" nil gtags-mode-map))
 
 (defvar my-gtags-command)
 (setq-default my-gtags-command "gtags")

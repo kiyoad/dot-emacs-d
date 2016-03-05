@@ -13,4 +13,4 @@
     ;; try-complete-lisp-symbol
     ))
 
-(global-set-key (kbd "M-/") 'hippie-expand)
+(bind-key "M-/" 'hippie-expand)
