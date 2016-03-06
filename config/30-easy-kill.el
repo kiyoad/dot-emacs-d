@@ -16,4 +16,4 @@
 ;; コピーした後にC-wを押せば、その部分を削除(キル)します。
 
 (el-get-bundle easy-kill
-  (global-set-key (kbd "M-w") 'easy-kill))
+  (bind-key "M-w" 'easy-kill))

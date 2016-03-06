@@ -2,7 +2,7 @@
 
 (el-get-bundle emacswiki:text-translator-vars)
 (el-get-bundle emacswiki:text-translator
-  (global-set-key (kbd "C-c w t") 'text-translator-translate-by-auto-selection)
+  (bind-key "C-c w t" 'text-translator-translate-by-auto-selection)
   (require 'text-translator)
   (with-eval-after-load-feature 'text-translator
     ;; (setq text-translator-default-engine "freetranslation.com_enja")

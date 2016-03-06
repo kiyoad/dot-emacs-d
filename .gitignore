@@ -18,6 +18,7 @@ recentf
 tutorial/
 url/
 semanticdb/
+smex-items
 # Compiled
 *.elc
 

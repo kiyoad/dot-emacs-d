@@ -34,4 +34,4 @@
   '((candidates . my/ac-look)
     (requires . 2)))
 
-(global-set-key (kbd "C-M-l") 'ac-look)
+(bind-key "C-M-l" 'ac-look)

@@ -16,10 +16,10 @@
        (sdic-set-waei-dictionary "/usr/share/dict/jedict.sdic")))
 
 (autoload 'sdic-describe-word "sdic" "英単語の意味を調べる" t nil)
-(global-set-key (kbd "C-c w W") 'sdic-describe-word)
+(bind-key "C-c w W" 'sdic-describe-word)
 (autoload 'sdic-describe-word-at-point
   "sdic" "カーソルの位置の英単語の意味を調べる" t nil)
-(global-set-key (kbd "C-c w w") 'sdic-describe-word-at-point)
+(bind-key "C-c w w" 'sdic-describe-word-at-point)
 (setq sdic-face-color "Yellow")
 (setq sdic-window-height 5) ; 検索結果のウィンドウの表示高さ。
 (setq sdic-disable-select-window t) ; t だと検索結果ウィンドウに移動しない。
