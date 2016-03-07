@@ -13,4 +13,5 @@
     ;; try-complete-lisp-symbol
     ))
 
+(require 'bind-key)
 (bind-key "M-/" 'hippie-expand)

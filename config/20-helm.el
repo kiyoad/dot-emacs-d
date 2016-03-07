@@ -9,6 +9,7 @@
 (require 'helm-config)
 (require 'helm-files)
 
+(require 'bind-key)
 ;;(bind-key "M-x"     'helm-M-x)
 (bind-key "C-x C-z" 'helm-resume)
 (setq max-specpdl-size 3000)            ; for imenu

@@ -9,6 +9,7 @@
 (add-to-list 'load-path "/usr/local/share/gtags")
 (require 'gtags)
 
+(require 'bind-key)
 (with-eval-after-load 'gtags
   (bind-key "C-t" nil gtags-mode-map))
 

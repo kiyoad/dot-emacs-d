@@ -5,6 +5,7 @@
 (setq bm-repository-file (concat user-emacs-directory "bm-repository"))
 (el-get-bundle bm)
 (require 'bm)
+(require 'bind-key)
 (bind-key "M-[" 'bm-previous)
 (bind-key "M-]" 'bm-next)
 ;; (global-set-key (kbd "M-/") 'bm-show-all)

@@ -78,6 +78,7 @@
 (eval-after-load "japanese"
   '(setq quail-japanese-use-double-n t))
 
+(require 'bind-key)
 (eval-after-load 'quail
   '(progn
      (defadvice quail-define-package (before my-quail-define-package activate)

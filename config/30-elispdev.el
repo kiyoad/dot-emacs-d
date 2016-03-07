@@ -1,5 +1,6 @@
 ;;-*- coding: utf-8 -*-
 
+(require 'bind-key)
 (el-get-bundle elpa:lispxmp
   (bind-key "C-c C-d" 'lispxmp  emacs-lisp-mode-map))
 

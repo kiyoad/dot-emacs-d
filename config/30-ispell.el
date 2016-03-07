@@ -34,4 +34,5 @@
   '((candidates . my/ac-look)
     (requires . 2)))
 
+(require 'bind-key)
 (bind-key "C-M-l" 'ac-look)

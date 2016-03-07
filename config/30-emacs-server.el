@@ -6,4 +6,5 @@
   (if (yes-or-no-p "Quit emacs? ")
       (save-buffers-kill-emacs)
     (server-edit)))
+(require 'bind-key)
 (bind-key "C-x C-c" 'my-kill-emacs)
