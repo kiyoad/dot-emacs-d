@@ -1,5 +1,6 @@
 ;;-*- coding: utf-8 -*-
 
+(require 'bind-key)
 (el-get-bundle smex
   (smex-initialize)
   (bind-key "M-x" 'smex)

@@ -7,6 +7,7 @@
              (gtags-mode 1)
              (setq tab-width 4)))
 
+(require 'bind-key)
 (el-get-bundle helm-go-package
   (with-eval-after-load 'go-mode
     (bind-key "C-c C-a" 'helm-go-package go-mode-map)))

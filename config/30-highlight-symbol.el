@@ -4,6 +4,7 @@
 
 (el-get-bundle highlight-symbol)
 (setq highlight-symbol-idle-delay 1.0)
+(require 'bind-key)
 (bind-key "M-s h R" 'highlight-symbol-query-replace)
 (custom-set-faces
  '(highlight-symbol-face ((t (:background "#0000FF")))))

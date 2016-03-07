@@ -5,5 +5,6 @@
 (el-get-bundle yasnippet)
 (el-get-bundle emacs-jp/helm-c-yasnippet
   (setq helm-yas-space-match-any-greedy t))
+(require 'bind-key)
 (bind-key "C-c y" 'helm-yas-complete)
 (yas-global-mode 1)

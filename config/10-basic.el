@@ -10,6 +10,7 @@
   (set-file-name-coding-system 'utf-8-hfs)
   (setq locale-coding-system 'utf-8-hfs))
 
+(require 'bind-key)
 (bind-key "C-z" 'scroll-down)
 (bind-key "C-h" 'backward-delete-char-untabify)
 (bind-key "C-h" 'isearch-delete-char isearch-mode-map)

@@ -16,6 +16,7 @@
        (sdic-set-waei-dictionary "/usr/share/dict/jedict.sdic")))
 
 (autoload 'sdic-describe-word "sdic" "英単語の意味を調べる" t nil)
+(require 'bind-key)
 (bind-key "C-c w W" 'sdic-describe-word)
 (autoload 'sdic-describe-word-at-point
   "sdic" "カーソルの位置の英単語の意味を調べる" t nil)

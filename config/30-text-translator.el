@@ -1,5 +1,6 @@
 ;;-*- coding: utf-8 -*-
 
+(require 'bind-key)
 (el-get-bundle emacswiki:text-translator-vars)
 (el-get-bundle emacswiki:text-translator
   (bind-key "C-c w t" 'text-translator-translate-by-auto-selection)

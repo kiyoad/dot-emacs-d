@@ -1,5 +1,6 @@
 ;;-*- coding: utf-8 -*-
 
+(require 'bind-key)
 (el-get-bundle magit
   (bind-key "C-x v d" 'magit-status)
   (bind-key "C-x v L" 'magit-log-popup)

@@ -4,6 +4,7 @@
   '((t :background "orange" :foreground "black" ))
   "IPA mode highlight")
 
+(require 'bind-key)
 (el-get-bundle ipa
   (bind-key "C-c i i" 'ipa-insert)
   (bind-key "C-c i e" 'ipa-edit)
