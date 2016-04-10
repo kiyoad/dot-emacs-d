@@ -91,7 +91,7 @@
               )))
 (add-hook 'dired-mode-hook
            '(lambda () (dired-omit-mode 1))) ; C-x M-o
-(setq dired-listing-switches "-alh")
+(setq dired-listing-switches "-alhF --group-directories-first")
 (setq dired-dwim-target t)
 
 (setq inhibit-startup-screen t)
