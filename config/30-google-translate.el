@@ -3,7 +3,7 @@
 ;; http://rubikitch.com/2014/12/07/google-translate/
 
 (el-get-bundle google-translate
-  (defvar google-translate-english-chars "[:ascii:]"
+  (defvar google-translate-english-chars "[:ascii:]“”"
     "これらの文字が含まれているときは英語とみなす")
   (require 'google-translate)
   (defun google-translate-enja-or-jaen (&optional string)
