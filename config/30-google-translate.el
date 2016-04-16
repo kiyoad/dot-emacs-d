@@ -6,6 +6,7 @@
   (defvar google-translate-english-chars "[:ascii:]“”"
     "これらの文字が含まれているときは英語とみなす")
   (require 'google-translate)
+  (require 'bind-key)
   (defun google-translate-enja-or-jaen (&optional string)
     "regionか、現在のセンテンスを言語自動判別でGoogle翻訳する。"
     (interactive)
@@ -33,5 +34,9 @@
        (if asciip "en" "ja")
        (if asciip "ja" "en")
        string)))
-  (require 'bind-key)
-  (bind-key "C-c w t" 'google-translate-enja-or-jaen))
+  (bind-key "C-c w t" 'google-translate-enja-or-jaen)
+
+  (setq google-translate-default-source-language "en")
+  (setq google-translate-default-target-language "ja")
+  (bind-key "C-c w e" 'google-translate-at-point)
+  (bind-key "C-c w j" 'google-translate-at-point-reverse))
