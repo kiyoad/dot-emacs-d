@@ -11,7 +11,8 @@
 
 (require 'bind-key)
 (with-eval-after-load 'gtags
-  (bind-key "C-t" nil gtags-mode-map))
+  (bind-key "C-t" nil gtags-mode-map)
+  (bind-key "M-." 'gtags-find-tag-from-here gtags-mode-map))
 
 (defvar my-gtags-command)
 (setq-default my-gtags-command "gtags")
