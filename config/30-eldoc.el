@@ -1,6 +1,6 @@
 ;;-*- coding: utf-8 -*-
 
-(el-get-bundle elpa:eldoc-extension
+(el-get-bundle eldoc-extension
   (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
   (add-hook 'lisp-interaction-mode-hook 'turn-on-eldoc-mode)
   (add-hook 'ielm-mode-hook 'turn-on-eldoc-mode)
