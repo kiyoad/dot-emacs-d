@@ -2,8 +2,6 @@
 
 ;; http://rubikitch.com/2015/03/12/bbyac/
 
-(el-get-bundle browse-kill-ring)
-(el-get-bundle baohaojun/bbyac)
 (require 'browse-kill-ring)
 (require 'bbyac)
 

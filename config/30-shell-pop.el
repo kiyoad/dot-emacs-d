@@ -3,5 +3,5 @@
 ;; http://rubikitch.com/2015/06/16/shell-pop/
 
 (require 'bind-key)
-(el-get-bundle shell-pop
-  (bind-key "C-c c" 'shell-pop))
+(require 'shell-pop)
+(bind-key "C-c c" 'shell-pop)

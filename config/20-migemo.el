@@ -1,6 +1,5 @@
 ;;-*- coding: utf-8 -*-
 
-(el-get-bundle migemo)
 (require 'migemo)
 (setq migemo-command "cmigemo")
 (setq migemo-options '("-q" "--emacs"))

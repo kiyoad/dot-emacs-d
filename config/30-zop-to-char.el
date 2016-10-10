@@ -3,5 +3,5 @@
 ;; http://rubikitch.com/2016/02/15/sd1507-builtin/
 
 (require 'bind-key)
-(el-get-bundle zop-to-char
-  (bind-key "M-z" 'zop-up-to-char))
+(require 'zop-to-char)
+(bind-key "M-z" 'zop-up-to-char)

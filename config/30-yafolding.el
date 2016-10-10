@@ -9,5 +9,5 @@
 ;; C-S-RET
 ;;   現在位置を含む階層を隠す
 
-(el-get-bundle yafolding)
+(require 'yafolding)
 (add-hook 'prog-mode-hook 'yafolding-mode)

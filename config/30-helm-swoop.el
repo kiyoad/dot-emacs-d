@@ -1,7 +1,7 @@
 ;;-*- coding: utf-8 -*-
 
-(el-get-bundle helm-swoop)
 (require 'bind-key)
+(require 'helm-swoop)
 (with-eval-after-load "helm-swoop"
   (bind-key "C-s" 'helm-next-line     helm-swoop-map)
   (bind-key "C-r" 'helm-previous-line helm-swoop-map)

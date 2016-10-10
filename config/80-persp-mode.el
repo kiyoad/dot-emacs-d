@@ -2,7 +2,6 @@
 
 ;; http://rubikitch.com/2015/02/13/persp-mode/
 
-(el-get-bundle persp-mode)
 (require 'persp-mode)
 (persp-mode 1)
 (defun persp-register-buffers-on-create ()
@@ -17,8 +16,8 @@
     (persp-add-buffer (get-buffer bufname))))
 (add-hook 'persp-activated-hook 'persp-register-buffers-on-create)
 
-(defun my/persp-buffer-list ()
-  (let* ((my/buffer-list (buffer-list))
+(defun my/persp-buffer-list (&optional FRAME)
+  (let* ((my/buffer-list (buffer-list FRAME))
          (my/buffer-count (length my/buffer-list))
          (index 0)
          (my/new-buffer-list nil))

@@ -3,7 +3,6 @@
 (setq-default bm-buffer-persistence t)
 (setq bm-restore-repository-on-load t)
 (setq bm-repository-file (concat user-emacs-directory "bm-repository"))
-(el-get-bundle bm)
 (require 'bm)
 (require 'bind-key)
 (bind-key "M-[" 'bm-previous)
@@ -18,8 +17,6 @@
                                 (bm-buffer-save-all)
                                 (bm-repository-save)))
 
-(el-get-bundle s)
-(el-get-bundle helm-bm)
 (require 'helm-bm)
 (push '(migemo) helm-source-bm)
 (setq helm-source-bm (delete '(multiline) helm-source-bm))

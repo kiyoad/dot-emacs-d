@@ -1,6 +1,5 @@
 ;;-*- coding: utf-8 -*-
 
-(el-get-bundle ido-vertical-mode)
 (require 'ido-vertical-mode)
 (setq ido-max-window-height 0.75)
 (setq ido-enable-flex-matching t)

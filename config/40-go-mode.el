@@ -1,6 +1,6 @@
 ;;-*- coding: utf-8 -*-
 
-(el-get-bundle go-mode)
+(require 'go-mode)
 (add-hook 'go-mode-hook
           '(lambda ()
              (setq my-gtags-command "pygtags")
@@ -8,9 +8,9 @@
              (setq tab-width 4)))
 
 (require 'bind-key)
-(el-get-bundle helm-go-package
-  (with-eval-after-load 'go-mode
-    (bind-key "C-c C-a" 'helm-go-package go-mode-map)))
+(require 'helm-go-package)
+(with-eval-after-load 'go-mode
+  (bind-key "C-c C-a" 'helm-go-package go-mode-map))
 
 (setq my-gopath "/opt/go")
 
@@ -22,18 +22,16 @@
         'load-path (concat my-gopath "/src/github.com/dougm/goflymake"))
        (require 'go-flycheck)
        (add-hook 'go-mode-hook 'flycheck-mode)
-       (el-get-bundle go-eldoc          ; use github.com/nsf/gocode
-         (add-hook 'go-mode-hook 'go-eldoc-setup))
-       (el-get-bundle direx)
-       (el-get-bundle
-         syohex/emacs-go-direx        ; use github.com/jstemmer/gotags
-         (with-eval-after-load 'go-mode
-           (bind-key "C-c C-j" 'go-direx-pop-to-buffer go-mode-map))
-         (push '("^\*go-direx:" :regexp t :position left :width 0.4
-                 :dedicated t :stick t)
-               popwin:special-display-config))
-       (el-get-bundle
-         dominikh/go-errcheck.el)    ; use github.com/kisielk/errcheck
+       (require 'go-eldoc) ; use github.com/nsf/gocode
+       (add-hook 'go-mode-hook 'go-eldoc-setup)
+       (require 'direx)
+       (require 'go-direx) ; github.com/jstemmer/gotags
+       (with-eval-after-load 'go-mode
+         (bind-key "C-c C-j" 'go-direx-pop-to-buffer go-mode-map))
+       (push '("^\*go-direx:" :regexp t :position left :width 0.4
+               :dedicated t :stick t)
+             popwin:special-display-config)
+       (require 'go-errcheck) ; use github.com/kisielk/errcheck
        (add-hook 'go-mode-hook
                  '(lambda ()    ; use golang.org/x/tools/cmd/goimports
                     (setq gofmt-command "goimports")

@@ -1,9 +1,9 @@
 ;;-*- coding: utf-8 -*-
 
-(el-get-bundle helm)
+(require 'helm)
 
 (setq recentf-max-saved-items 512)
-(el-get-bundle recentf-ext)
+(require 'recentf-ext)
 
 (require 'helm)
 (require 'helm-config)

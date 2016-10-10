@@ -1,4 +1,4 @@
 ;;-*- coding: utf-8 -*-
 
-(el-get-bundle json-mode)
-(el-get-bundle json-reformat)
+(require 'json-mode)
+(require 'json-reformat)

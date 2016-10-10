@@ -2,7 +2,6 @@
 
 ;; http://rubikitch.com/2015/02/28/hiwin/
 
-(el-get-bundle hiwin
-  (hiwin-activate)
-  (set-face-background 'hiwin-face "#585858"))
-
+(require 'hiwin)
+(hiwin-activate)
+(set-face-background 'hiwin-face "#585858")
