@@ -6,6 +6,9 @@
   "これらの文字が含まれているときは英語とみなす")
 (require 'google-translate)
 (require 'bind-key)
+
+(setq google-translate--tkk-debug nil)
+
 (defun google-translate-enja-or-jaen (&optional string)
   "regionか、現在のセンテンスを言語自動判別でGoogle翻訳する。"
   (interactive)
