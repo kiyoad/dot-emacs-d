@@ -19,6 +19,8 @@ tutorial/
 url/
 semanticdb/
 smex-items
+public-sdic/eiwa.sdic
+public-sdic/waei.sdic
 # Compiled
 *.elc
 

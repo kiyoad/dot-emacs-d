@@ -13,8 +13,9 @@
        (sdic-set-waei-dictionary (concat user-emacs-directory "private-sdic/waei.sdic"))
        (setq sdic-default-coding-system 'utf-8-unix))
       (t
-       (sdic-set-eiwa-dictionary "/usr/share/dict/gene.sdic")
-       (sdic-set-waei-dictionary "/usr/share/dict/jedict.sdic")))
+       (sdic-set-eiwa-dictionary (concat user-emacs-directory "public-sdic/eiwa.sdic"))
+       (sdic-set-waei-dictionary (concat user-emacs-directory "public-sdic/waei.sdic"))
+       (setq sdic-default-coding-system 'utf-8-unix)))
 
 (autoload 'sdic-describe-word "sdic" "英単語の意味を調べる" t nil)
 (require 'bind-key)
