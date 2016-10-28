@@ -1,7 +1,7 @@
 ;;-*- coding: utf-8 -*-
 
 ;; You can use package-selected-packages to (re)install packages on other machines
-;; by running ‘package-install-selected-packages’.
+;; by running 'package-refresh-contents' and 'package-install-selected-packages'.
 
 (package-initialize)
 (setq package-archives
