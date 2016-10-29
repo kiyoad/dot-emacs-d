@@ -18,17 +18,6 @@
 (bind-key "C-x C-b" 'ibuffer-list-buffers)
 (bind-key "M-f" 'forward-to-word)
 
-(winner-mode 1)
-(defun my-winner-undo (n)
-  "My winner-undo and redo."
-  (interactive "p")
-  (if (not (eql n 1))
-      (winner-redo)
-    (winner-undo)
-    (setq this-command 'winner-undo)))
-
-(bind-key* "C-t" 'my-winner-undo)
-
 (defun my-scroll-down-other-window ()
   "Scroll next window downward by nearly full screen."
   (interactive)
