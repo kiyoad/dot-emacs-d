@@ -14,7 +14,7 @@
   '(add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
 
 ;; look command with auto-complete
-(defun my/ac-look ()
+(defun my-ac-source ()
   "`look' command with auto-completelook"
   (interactive)
   (unless (executable-find "look")
@@ -24,15 +24,17 @@
       (call-process-shell-command cmd nil t)
       (split-string-and-unquote (buffer-string) "\n"))))
 
-(defun ac-look ()
+(defun my-ac-look ()
   (interactive)
   (let ((ac-menu-height 50)
         (ac-candidate-limit t))
-  (auto-complete '(ac-source-look))))
+    (unless auto-complete-mode
+      (auto-complete-mode))
+    (auto-complete '(ac-source-look))))
 
 (defvar ac-source-look
-  '((candidates . my/ac-look)
+  '((candidates . my-ac-source)
     (requires . 2)))
 
 (require 'bind-key)
-(bind-key "C-M-l" 'ac-look)
+(bind-key "C-M-l" 'my-ac-look)
