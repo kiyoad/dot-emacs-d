@@ -21,6 +21,7 @@ semanticdb/
 smex-items
 public-sdic/eiwa.sdic
 public-sdic/waei.sdic
+scratch_pop/
 # Compiled
 *.elc
 
