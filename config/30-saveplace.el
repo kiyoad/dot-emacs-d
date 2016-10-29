@@ -1,4 +1,3 @@
 ;;-*- coding: utf-8 -*-
 
-(setq-default save-place t)
-(require 'saveplace)
+(save-place-mode 1)
