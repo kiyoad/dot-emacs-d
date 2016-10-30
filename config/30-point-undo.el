@@ -2,5 +2,5 @@
 
 (require 'point-undo)
 (require 'bind-key)
-(bind-key* "C-_" 'point-undo)
-(bind-key* "C-M-_" 'point-redo)
+(bind-key* "M-[" 'point-undo)
+(bind-key* "M-]" 'point-redo)
