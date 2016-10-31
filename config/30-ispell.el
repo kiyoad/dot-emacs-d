@@ -25,6 +25,7 @@
       (split-string-and-unquote (buffer-string) "\n"))))
 
 (defun my-ac-look ()
+  "auto-complete look"
   (interactive)
   (let ((ac-menu-height 50)
         (ac-candidate-limit t))
@@ -37,4 +38,4 @@
     (requires . 2)))
 
 (require 'bind-key)
-(bind-key "C-M-l" 'my-ac-look)
+(bind-key "C-c w l" 'my-ac-look)
