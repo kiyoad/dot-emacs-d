@@ -1,8 +1,8 @@
 ;;-*- coding: utf-8 -*-
 
-(defface my-ipa-highlight
-  '((t :background "orange" :foreground "black" ))
-  "IPA mode highlight")
+(defface my-ipa-highlight '((t)) "IPA mode highlight")
+(set-face-foreground 'my-ipa-highlight (my-flatui-color "clouds"))
+(set-face-background 'my-ipa-highlight (my-flatui-color "midnight-blue"))
 
 (require 'bind-key)
 (require 'ipa)

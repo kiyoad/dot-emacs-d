@@ -23,7 +23,7 @@
 (autoload 'sdic-describe-word-at-point
   "sdic" "カーソルの位置の英単語の意味を調べる" t nil)
 (bind-key "C-c w w" 'sdic-describe-word-at-point)
-(setq sdic-face-color "Yellow")
+(setq sdic-face-color (my-flatui-color "orange"))
 (setq sdic-window-height 5) ; 検索結果のウィンドウの表示高さ。
 (setq sdic-disable-select-window t) ; t だと検索結果ウィンドウに移動しない。
 

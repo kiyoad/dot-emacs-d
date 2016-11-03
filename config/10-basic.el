@@ -40,15 +40,13 @@
       (setq ns-function-modifier 'hyper)
       ))
 
-;;(global-hl-line-mode 1)
-;;(custom-set-faces '(hl-line ((t (:background "#484848"))))) ; for zenburn-theme
-
 (require 'paren)
 (setq show-paren-delay 0)
 (show-paren-mode t)
 (setq show-paren-style 'expression)
+(set-face-foreground 'show-paren-match-face (my-flatui-color "alizarin"))
 (set-face-background 'show-paren-match-face nil)
-(set-face-underline 'show-paren-match-face "red")
+(set-face-underline 'show-paren-match-face t)
 
 (size-indication-mode t)
 (require 'time)

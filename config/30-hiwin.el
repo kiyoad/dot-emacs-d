@@ -4,4 +4,4 @@
 
 (require 'hiwin)
 (hiwin-activate)
-(set-face-background 'hiwin-face "#585858")
+(set-face-background 'hiwin-face (my-flatui-color "silver"))

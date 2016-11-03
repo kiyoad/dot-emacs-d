@@ -1,7 +1,8 @@
 ;;-*- coding: utf-8 -*-
 
 (which-function-mode 1)
-(set-face-foreground 'which-func "White")
+(set-face-background 'header-line (my-flatui-color "clouds"))
+(set-face-background 'which-func  (my-flatui-color "clouds"))
 
 (setq mode-line-misc-info (delete (assoc 'which-func-mode
                                       mode-line-misc-info) mode-line-misc-info)

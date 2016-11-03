@@ -6,7 +6,6 @@
 (setq highlight-symbol-idle-delay 1.0)
 (require 'bind-key)
 (bind-key "M-s h R" 'highlight-symbol-query-replace)
-(custom-set-faces
- '(highlight-symbol-face ((t (:background "#0000FF")))))
+(set-face-background 'highlight-symbol-face (my-flatui-color "silver"))
 (add-hook 'prog-mode-hook 'highlight-symbol-mode)
 (add-hook 'prog-mode-hook 'highlight-symbol-nav-mode)
