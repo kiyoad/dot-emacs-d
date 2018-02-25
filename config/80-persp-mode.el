@@ -8,8 +8,8 @@
 
 (add-to-list 'persp-filter-save-buffers-functions
              #'(lambda (b) (string-equal "ipa-mode" (buffer-local-value 'major-mode b))))
-;; (add-to-list 'persp-filter-save-buffers-functions
-;;              #'(lambda (b) (string-equal "dired-mode" (buffer-local-value 'major-mode b))))
+(add-to-list 'persp-filter-save-buffers-functions
+             #'(lambda (b) (string-equal "dired-mode" (buffer-local-value 'major-mode b))))
 (add-to-list 'persp-filter-save-buffers-functions
              #'(lambda (b) (let ((name (buffer-local-value 'buffer-file-name b)))
                              (and (stringp name) (string-match "/COMMIT_EDITMSG$" name)))))
