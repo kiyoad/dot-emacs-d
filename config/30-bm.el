@@ -20,6 +20,7 @@
 (require 'helm-bm)
 (push '(migemo) helm-source-bm)
 (setq helm-source-bm (delete '(multiline) helm-source-bm))
+(require 'helm-for-files)
 (add-to-list 'helm-for-files-preferred-list 'helm-source-bm)
 
 (defun bm-toggle-or-helm ()
