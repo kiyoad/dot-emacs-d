@@ -66,7 +66,7 @@
 (setq message-log-max 10000)
 (setq history-length 1000)
 
-(ffap-bindings)
+;; (ffap-bindings)
 
 (require 'dired-x)
 (bind-key "r" 'wdired-change-to-wdired-mode dired-mode-map)

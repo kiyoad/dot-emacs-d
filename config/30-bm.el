@@ -5,8 +5,8 @@
 (setq bm-repository-file (concat user-emacs-directory "bm-repository"))
 (require 'bm)
 (require 'bind-key)
-(bind-key "C-_" 'bm-previous)
-(bind-key "C-M-_" 'bm-next)
+(bind-key "M-{" 'bm-previous)
+(bind-key "M-}" 'bm-next)
 ;; (global-set-key (kbd "M-/") 'bm-show-all)
 (add-hook 'find-file-hook 'bm-buffer-restore)
 (add-hook 'kill-buffer-hook 'bm-buffer-save)
@@ -20,6 +20,7 @@
 (require 'helm-bm)
 (push '(migemo) helm-source-bm)
 (setq helm-source-bm (delete '(multiline) helm-source-bm))
+(require 'helm-for-files)
 (add-to-list 'helm-for-files-preferred-list 'helm-source-bm)
 
 (defun bm-toggle-or-helm ()

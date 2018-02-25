@@ -1,4 +1,4 @@
 ;;-*- coding: utf-8 -*-
 
-(require 'auto-complete)
+(require 'auto-complete-config)
 (ac-config-default)

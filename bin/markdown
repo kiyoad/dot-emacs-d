@@ -1,4 +1,3 @@
 #!/bin/bash
 set -eu
-grip --export ${1} > /dev/null 2>&1
-cat ${1%.*}.html
+pandoc -f markdown_github -t html5 ${1}
