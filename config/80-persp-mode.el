@@ -7,9 +7,10 @@
 (persp-mode 1)
 
 (add-to-list 'persp-filter-save-buffers-functions
-             #'(lambda (b) (string-equal "ipa-mode" (buffer-local-value 'major-mode b))))
+             #'(lambda (b) (string-equal "ipa-mode" (symbol-name (buffer-local-value 'major-mode b)))))
 (add-to-list 'persp-filter-save-buffers-functions
-             #'(lambda (b) (string-equal "dired-mode" (buffer-local-value 'major-mode b))))
+             #'(lambda (b) (string-equal "dired-mode" (symbol-name (buffer-local-value 'major-mode b)))))
 (add-to-list 'persp-filter-save-buffers-functions
-             #'(lambda (b) (let ((name (buffer-local-value 'buffer-file-name b)))
-                             (and (stringp name) (string-match "/COMMIT_EDITMSG$" name)))))
+             #'(lambda (b)
+                 (let ((result (string-match "^magit-" (symbol-name (buffer-local-value 'major-mode b)))))
+                   (and (numberp result) (= result 0)))))
