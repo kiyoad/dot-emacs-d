@@ -9,3 +9,5 @@
 
 (require 'bind-key)
 (bind-key "C-x u" 'my-undo)
+(bind-key "C-/" 'my-undo)
+(bind-key "C-_" 'my-undo)
