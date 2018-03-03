@@ -1,2 +1,2 @@
 #!/bin/bash
-gtags --gtagslabel=pygments-parser $*
+gtags --gtagslabel=pygments $*
