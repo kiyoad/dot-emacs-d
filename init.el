@@ -22,7 +22,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(flycheck-warning ((t (:foreground "color-214" :underline t :weight bold))))
+ '(flycheck-error ((t (:background "color-219" :foreground "black" :underline t))))
+ '(flycheck-info ((t (:background "color-51" :foreground "black" :underline t))))
+ '(flycheck-warning ((t (:background "color-226" :foreground "black" :underline t))))
  '(highlight-symbol-face ((t (:background "#0000FF")))))
 
 
