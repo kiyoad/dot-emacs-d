@@ -12,7 +12,7 @@
         (emacs-lisp-mode . lisp-complete-symbol)
         (text-mode       . dabbrev-completion)
         ))
-
+(add-to-list 'smart-tab-disabled-major-modes 'shell-mode)
 (global-smart-tab-mode 1)
 
 (provide '30-smart-tab)
