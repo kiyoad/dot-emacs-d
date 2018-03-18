@@ -10,7 +10,7 @@
 (require 'bind-key)
 (bind-key "C-M-i" 'company-complete)
 
-(defun my-company-abort-spacen ()
+(defun my-company-abort-space ()
   "My company-abort and insert space."
   (interactive)
   (company-abort)
