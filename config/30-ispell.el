@@ -1,4 +1,7 @@
-;;-*- coding: utf-8 -*-
+;;; Package --- summary
+;;; -*- coding: utf-8 -*-
+;;; Commentary:
+;;; Code:
 
 ;; Mac:
 ;; sudo port install aspell
@@ -14,8 +17,9 @@
   '(add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
 
 ;; look command with auto-complete
+(require 'auto-complete)
 (defun my-ac-source ()
-  "`look' command with auto-completelook"
+  "`look' command with auto-completelook."
   (interactive)
   (unless (executable-find "look")
     (error "Please install `look' command"))
@@ -25,7 +29,7 @@
       (split-string-and-unquote (buffer-string) "\n"))))
 
 (defun my-ac-look ()
-  "auto-complete look"
+  "My auto-complete look."
   (interactive)
   (let ((ac-menu-height 50)
         (ac-candidate-limit t))
@@ -39,3 +43,6 @@
 
 (require 'bind-key)
 (bind-key "C-c w l" 'my-ac-look)
+
+(provide '30-ispell)
+;;; 30-ispell.el ends here
