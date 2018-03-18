@@ -1,4 +1,7 @@
-;;-*- coding: utf-8 -*-
+;;; Package --- summary
+;;; -*- coding: utf-8 -*-
+;;; Commentary:
+;;; Code:
 
 (require 'go-mode)
 (add-hook 'go-mode-hook
@@ -16,8 +19,8 @@
 
 (cond ((file-directory-p my-gopath)
        (add-to-list
-        'load-path (concat my-gopath "/src/github.com/nsf/gocode/emacs"))
-       (require 'go-autocomplete)
+        'load-path (concat my-gopath "/src/github.com/nsf/gocode/emacs-company"))
+       (require 'company-go)
        (add-to-list
         'load-path (concat my-gopath "/src/github.com/dougm/goflymake"))
        (require 'go-flycheck)
@@ -37,3 +40,6 @@
                     (setq gofmt-command "goimports")
                     (add-hook 'before-save-hook 'gofmt-before-save)))
        ))
+
+(provide '40-go-mode)
+;;; 40-go-mode.el ends here
