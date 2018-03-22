@@ -16,7 +16,6 @@
 (bind-key "C-h" 'isearch-delete-char isearch-mode-map)
 (bind-key "M-?" 'help-for-help)
 (bind-key "C-x C-b" 'ibuffer-list-buffers)
-(bind-key "M-f" 'forward-to-word)
 
 (defun my-scroll-down-other-window ()
   "Scroll next window downward by nearly full screen."
