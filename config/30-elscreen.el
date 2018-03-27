@@ -3,7 +3,7 @@
 ;;; Commentary:
 ;;; Code:
 
-(setq elscreen-prefix-key "\M-]")
+(setq elscreen-prefix-key (kbd "C-M-]"))
 (setq elscreen-tab-display-control nil)
 (setq elscreen-tab-display-kill-screen nil)
 
