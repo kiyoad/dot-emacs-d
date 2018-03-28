@@ -11,8 +11,7 @@
 
 (add-hook 'js2-mode-hook
           '(lambda ()
-             (setq my-gtags-command "pygtags")
-             (gtags-mode 1)))
+             (ggtags-mode 1)))
 
 (provide '40-js2-mode)
 ;;; 40-js2-mode.el ends here

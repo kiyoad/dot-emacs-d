@@ -3,8 +3,6 @@
 ;;; Commentary:
 ;;; Code:
 
-(defalias 'gtags-mode 'ggtags-mode)
-
 (add-hook 'c-mode-common-hook
           (lambda ()
             (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
@@ -12,7 +10,8 @@
 
 (add-hook 'python-mode-hook
           '(lambda ()
-             (gtags-mode 1)))
+             (ggtags-mode 1)
+             (setq tab-width 4)))
 
 (provide '30-ggtags)
 ;;; 30-ggtags.el ends here

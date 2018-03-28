@@ -6,8 +6,7 @@
 (require 'go-mode)
 (add-hook 'go-mode-hook
           '(lambda ()
-             (setq my-gtags-command "pygtags")
-             (gtags-mode 1)
+             (ggtags-mode 1)
              (setq tab-width 4)))
 
 (require 'bind-key)
