@@ -28,6 +28,7 @@
  '(flycheck-error ((t (:background "color-219" :foreground "black" :underline t))))
  '(flycheck-info ((t (:background "color-51" :foreground "black" :underline t))))
  '(flycheck-warning ((t (:background "color-226" :foreground "black" :underline t))))
+ '(ggtags-global-line ((t (:background "brightwhite"))))
  '(highlight-symbol-face ((t (:background "#0000FF")))))
 
 
