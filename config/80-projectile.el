@@ -28,5 +28,10 @@
 (projectile-mode +1)
 (helm-projectile-on)
 
+(add-hook `package-menu-mode-hook
+          (lambda ()
+            (projectile-mode -1)
+            t))
+
 (provide '80-projectile)
 ;;; 80-projectile.el ends here
