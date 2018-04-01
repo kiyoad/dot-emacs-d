@@ -1,4 +1,7 @@
-;;-*- coding: utf-8 -*-
+;;; Package --- summary
+;;; -*- coding: utf-8 -*-
+;;; Commentary:
+;;; Code:
 
 (require 'misc)
 
@@ -47,7 +50,7 @@
 (set-face-background 'show-paren-match-face nil)
 (set-face-underline 'show-paren-match-face t)
 
-(size-indication-mode t)
+;; (size-indication-mode t)
 (require 'time)
 (setq display-time-day-and-date t)
 (setq display-time-24hr-format t)
@@ -57,8 +60,8 @@
 (setq-default indent-tabs-mode nil)
 
 (savehist-mode 1)
-(line-number-mode 1)
-(column-number-mode 1)
+(line-number-mode -1)
+(column-number-mode -1)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 
@@ -105,3 +108,9 @@
 
 (setq auto-save-list-file-prefix
       (concat user-emacs-directory "auto-save-list/.saves-"))
+
+(global-auto-revert-mode 1)
+(setq auto-revert-mode-text "")
+
+(provide '10-basic)
+;;; 10-basic.el ends here

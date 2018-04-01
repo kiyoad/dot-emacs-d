@@ -8,6 +8,9 @@
 (setq projectile-keymap-prefix (kbd "C-c C-p"))
 (setq projectile-completion-system 'helm)
 (setq projectile-switch-project-action #'projectile-dired)
+(setq projectile-mode-line
+  '(:eval (format " P_e[%s]"
+                  (projectile-project-name))))
 
 (add-hook 'persp-mode-projectile-bridge-mode-hook
           #'(lambda ()

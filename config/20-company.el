@@ -6,6 +6,7 @@
 (global-company-mode +1)
 (setq company-auto-complete t)
 (setq company-selection-wrap-around t)
+(setq company-lighter-base "c_y")
 
 (require 'bind-key)
 (bind-key "C-M-i" 'company-complete)
