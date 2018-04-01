@@ -1,4 +1,7 @@
-;;-*- coding: utf-8 -*-
+;;; Package --- summary
+;;; -*- coding: utf-8 -*-
+;;; Commentary:
+;;; Code:
 
 (require 'migemo)
 (setq migemo-command "cmigemo")
@@ -10,4 +13,7 @@
 (setq migemo-isearch-enable-p nil)      ; default MIGEMO off
 (migemo-init)
 
-(helm-migemo-mode 1)
+(helm-migemo-mode -1)                   ; default off
+
+(provide '20-migemo)
+;;; 20-migemo.el ends here
