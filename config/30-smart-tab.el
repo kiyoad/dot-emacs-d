@@ -13,6 +13,7 @@
         (text-mode       . dabbrev-completion)
         ))
 (add-to-list 'smart-tab-disabled-major-modes 'shell-mode)
+(setq smart-tab-user-provided-completion-function 'company-complete)
 (global-smart-tab-mode 1)
 
 (provide '30-smart-tab)
