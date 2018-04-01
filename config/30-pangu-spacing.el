@@ -1,4 +1,7 @@
-;;-*- coding: utf-8 -*-
+;;; Package --- summary
+;;; -*- coding: utf-8 -*-
+;;; Commentary:
+;;; Code:
 
 ;; http://rubikitch.com/2015/02/04/pangu-spacing/
 
@@ -14,6 +17,9 @@
 ;;; 見た目ではなくて実際にスペースを入れる
 (setq pangu-spacing-real-insert-separtor t)
 ;; text-modeやその派生モード(org-mode等)のみに使いたいならこれ
-(add-hook 'text-mode-hook 'pangu-spacing-mode)
+;; (add-hook 'text-mode-hook 'pangu-spacing-mode)
 ;; すべてのメジャーモードに使ってみたい人はこれを
 ;; (global-pangu-spacing-mode 1)
+
+(provide '30-pangu-spacing)
+;;; 30-pangu-spacing.el ends here
