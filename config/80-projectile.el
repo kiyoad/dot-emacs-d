@@ -31,10 +31,13 @@
 (projectile-mode +1)
 (helm-projectile-on)
 
-(add-hook `package-menu-mode-hook
-          (lambda ()
-            (projectile-mode -1)
-            t))
+(setq projectile-globally-ignored-modes
+      (append projectile-globally-ignored-modes
+              '("package-menu-mode" "magit-*" "ipa-mode" "dired-mode")))
+
+(setq projectile-globally-ignored-buffers
+      (append projectile-globally-ignored-buffers
+              '("COMMIT_EDITMSG" ".ipa")))
 
 (provide '80-projectile)
 ;;; 80-projectile.el ends here
