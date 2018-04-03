@@ -28,16 +28,24 @@
       (unless (eq ibuffer-sorting-mode 'alphabetic)
         (ibuffer-do-sort-by-alphabetic))))
 
-(projectile-mode +1)
-(helm-projectile-on)
-
 (setq projectile-globally-ignored-modes
-      (append projectile-globally-ignored-modes
-              '("package-menu-mode" "magit-*" "ipa-mode" "dired-mode")))
+      '("erc-mode"
+        "help-mode"
+        "completion-list-mode"
+        "Buffer-menu-mode"
+        "gnus-.*-mode"
+        "occur-mode"
+        "package-menu-mode"
+        "magit-*"
+        "ipa-mode"
+        "dired-mode"))
 
 (setq projectile-globally-ignored-buffers
-      (append projectile-globally-ignored-buffers
-              '("COMMIT_EDITMSG" ".ipa")))
+      '("COMMIT_EDITMSG"
+        ".ipa"))
+
+(projectile-mode +1)
+(helm-projectile-on)
 
 (provide '80-projectile)
 ;;; 80-projectile.el ends here
