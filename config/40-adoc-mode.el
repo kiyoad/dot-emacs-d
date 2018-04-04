@@ -8,5 +8,7 @@
 
 (add-hook 'adoc-mode-hook 'pangu-spacing-mode)
 
+(add-to-list 'smart-tab-completion-functions-alist '(adoc-mode . my-hippie-expand))
+
 (provide '40-adoc-mode)
 ;;; 40-adoc-mode.el ends here

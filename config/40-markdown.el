@@ -16,5 +16,8 @@
 (add-hook 'markdown-mode-hook 'pangu-spacing-mode)
 (add-hook 'gfm-mode-hook 'pangu-spacing-mode)
 
+(add-to-list 'smart-tab-completion-functions-alist '(markdown-mode . my-hippie-expand))
+(add-to-list 'smart-tab-completion-functions-alist '(gfm-mode . my-hippie-expand))
+
 (provide '40-markdown)
 ;;; 40-markdown.el ends here

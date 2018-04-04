@@ -19,5 +19,10 @@
 (require 'bind-key)
 (bind-key "M-/" 'hippie-expand)
 
+(defun my-hippie-expand ()
+  "My 'hippie-expand'."
+  (interactive "P")
+  (hippie-expand nil))
+
 (provide '30-hippie-expand)
 ;;; 30-hippie-expand.el ends here
