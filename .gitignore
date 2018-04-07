@@ -3,6 +3,7 @@
 .emacs.desktop.lock
 .python-environments
 .ipa
+.mc-lists.el
 ac-comphist.dat
 auto-install/
 auto-save-list/
@@ -24,6 +25,10 @@ public-sdic/waei.sdic
 scratch_pop/
 ddskk/
 skk-get-jisyo/
+ido.last
+projectile-bookmarks.eld
+projectile.cache
+
 # Compiled
 *.elc
 
