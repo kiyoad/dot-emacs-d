@@ -28,6 +28,7 @@ skk-get-jisyo/
 ido.last
 projectile-bookmarks.eld
 projectile.cache
+games/
 
 # Compiled
 *.elc
