@@ -9,7 +9,7 @@
 (setq projectile-completion-system 'helm)
 (setq projectile-switch-project-action #'projectile-dired)
 (setq projectile-mode-line
-  '(:eval (format " P_e[%s]"
+  '(:eval (format "[%s]"
                   (projectile-project-name))))
 
 (add-hook 'persp-mode-projectile-bridge-mode-hook
@@ -47,5 +47,5 @@
 (projectile-mode +1)
 (helm-projectile-on)
 
-(provide '80-projectile)
-;;; 80-projectile.el ends here
+(provide '70-projectile)
+;;; 70-projectile.el ends here

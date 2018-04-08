@@ -1,8 +1,8 @@
-;;-*- coding: utf-8 -*-
+;;; Package --- summary
+;;; -*- coding: utf-8 -*-
+;;; Commentary:
+;;; Code:
 
-;; http://rubikitch.com/2015/02/13/persp-mode/
-
-(require 'persp-mode)
 (setq persp-set-ido-hooks t)
 (persp-mode 1)
 
@@ -14,3 +14,6 @@
              #'(lambda (b)
                  (let ((result (string-match "^magit-" (symbol-name (buffer-local-value 'major-mode b)))))
                    (and (numberp result) (= result 0)))))
+
+(provide '80-persp-mode)
+;;; 80-persp-mode.el ends here
