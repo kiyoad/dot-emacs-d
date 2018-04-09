@@ -9,13 +9,17 @@
 
 (elscreen-start)
 
-(defun my-switch-to-buffer (prefix)
-  "Toggle to recent buffer.
+(defun my-toggle-to-recent-buffer ()
+  "Toggle to recent buffer."
+  (interactive)
+  (switch-to-buffer nil))
+
+(defun my-toggle-to-recent-elscreen (prefix)
+  "Toggle to recent elscreen.
 with PREFIX,"
   (interactive "P")
   (cond
-   ((not prefix) (switch-to-buffer nil))
-   ((equal prefix '(4))
+   ((not prefix)
     (cond
      ((elscreen-one-screen-p)
       (elscreen-create))
@@ -24,7 +28,8 @@ with PREFIX,"
    (t (helm-elscreen-history))))
 
 (require 'bind-key)
-(bind-key* "C-t" 'my-switch-to-buffer)
+(bind-key* "C-t" 'my-toggle-to-recent-buffer)
+(bind-key* "M-t" 'my-toggle-to-recent-elscreen)
 
 (provide '30-elscreen)
 ;;; 30-elscreen.el ends here
