@@ -17,5 +17,7 @@
         (define-key map (kbd "C-c o") 'my-origami-command-map)
         map))
 
+(add-hook 'prog-mode-hook 'origami-mode)
+
 (provide '30-origami)
 ;;; 30-origami.el ends here
