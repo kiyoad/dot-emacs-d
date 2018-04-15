@@ -1,12 +1,15 @@
-;;-*- coding: utf-8 -*-
+;;; Package --- summary
+;;; -*- coding: utf-8 -*-
+;;; Commentary:
+;;; Code:
 
 (setq-default bm-buffer-persistence t)
 (setq bm-restore-repository-on-load t)
 (setq bm-repository-file (concat user-emacs-directory "bm-repository"))
 (require 'bm)
 (require 'bind-key)
-(bind-key "M-{" 'bm-previous)
-(bind-key "M-}" 'bm-next)
+(bind-key "M-g M-p" 'bm-previous)
+(bind-key "M-g M-n" 'bm-next)
 ;; (global-set-key (kbd "M-/") 'bm-show-all)
 (add-hook 'find-file-hook 'bm-buffer-restore)
 (add-hook 'kill-buffer-hook 'bm-buffer-save)
@@ -30,3 +33,6 @@
   (when (eq last-command 'bm-toggle-or-helm)
     (helm-bm)))
 (bind-key "M-\\" 'bm-toggle-or-helm)
+
+(provide '30-bm)
+;;; 30-bm.el ends here
