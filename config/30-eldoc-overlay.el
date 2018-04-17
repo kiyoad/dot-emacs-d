@@ -3,9 +3,7 @@
 ;;; Commentary:
 ;;; Code:
 
-(require 'eldoc-overlay)
-(add-hook 'prog-mode-hook 'eldoc-overlay-enable)
-
+(setq eldoc-overlay-mode nil)
 (require 'bind-key)
 (bind-key "C-c t e" 'eldoc-overlay-toggle)
 
