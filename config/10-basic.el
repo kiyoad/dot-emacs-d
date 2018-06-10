@@ -44,18 +44,15 @@
 
 (require 'paren)
 (setq show-paren-delay 0)
-(show-paren-mode t)
-(setq show-paren-style 'expression)
-(set-face-foreground 'show-paren-match-face (my-flatui-color "alizarin"))
-(set-face-background 'show-paren-match-face nil)
-(set-face-underline 'show-paren-match-face t)
+(show-paren-mode 1)
+(setq show-paren-style 'mixed)
 
 ;; (size-indication-mode t)
 (require 'time)
 (setq display-time-day-and-date t)
 (setq display-time-24hr-format t)
 (setq display-time-format "%m/%d(%a) %H:%M")
-(display-time-mode t)
+(display-time-mode 1)
 
 (setq-default indent-tabs-mode nil)
 

@@ -1,6 +1,10 @@
-;;-*- coding: utf-8 -*-
+;;; Package --- summary
+;;; -*- coding: utf-8 -*-
+;;; Commentary:
+;;; Code:
 
 (add-to-list 'load-path "/usr/share/emacs/site-lisp/sdic")
+(setq default-fill-column fill-column)
 (require 'sdic)
 
 (defmacro sdic-set-eiwa-dictionary (dictionary-path)
@@ -49,3 +53,6 @@
   (bury-buffer sdic-buffer-name))
 
 (push '("*sdic*" :noselect t) popwin:special-display-config)
+
+(provide '30-sdic)
+;;; 30-sdic.el ends here
