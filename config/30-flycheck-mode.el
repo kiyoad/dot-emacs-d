@@ -5,8 +5,6 @@
 
 ;;; C-c ! v runs the command flycheck-verify-setup
 
-(require 'pos-tip)
-(require 'flycheck-pos-tip)
 (require 'flycheck)
 
 (defun my-use-python3-instead-of-python2 (x)
@@ -16,7 +14,7 @@
 
 (with-eval-after-load 'flycheck
   (advice-add 'flycheck-checker-default-executable :filter-return #'my-use-python3-instead-of-python2)
-  (flycheck-pos-tip-mode))
+  (add-hook 'flycheck-mode-hook 'flycheck-popup-tip-mode))
 
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
