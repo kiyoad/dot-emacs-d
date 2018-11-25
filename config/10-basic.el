@@ -13,6 +13,11 @@
   (set-file-name-coding-system 'utf-8-hfs)
   (setq locale-coding-system 'utf-8-hfs))
 
+(when (eq window-system 'x)
+  ;;(setq-default line-spacing 3)
+  (set-face-attribute 'default nil :family "Ricty Diminished" :height 100)
+  (set-fontset-font nil 'japanese-jisx0208 (font-spec :family "Ricty Diminished" )))
+
 (require 'bind-key)
 (bind-key "C-z" 'scroll-down)
 (bind-key "C-h" 'backward-delete-char-untabify)
@@ -85,8 +90,6 @@
 
 (setq frame-title-format
       (format "%%f - Emacs@%s" (system-name)))
-
-(setq-default line-spacing 3)
 
 (delete-selection-mode 1)
 
