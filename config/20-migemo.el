@@ -10,7 +10,7 @@
 (setq migemo-user-dictionary nil)
 (setq migemo-regex-dictionary nil)
 (setq migemo-coding-system 'utf-8-unix)
-(setq migemo-isearch-enable-p nil)      ; default MIGEMO off
+(setq migemo-isearch-enable-p nil)      ; default MIGEMO off (on -> (C-s) M-m)
 (migemo-init)
 
 (helm-migemo-mode -1)                   ; default off
