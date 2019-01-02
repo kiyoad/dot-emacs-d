@@ -3,11 +3,9 @@
 ;;; Commentary:
 ;;; Code:
 
+(require 'linum)
 (setq linum-format "%5d ")
-(add-hook 'prog-mode-hook
-          '(lambda ()
-             (linum-mode 1)
-             (set-face-attribute 'linum nil :height 0.75)))
+(set-face-attribute 'linum nil :height 0.75)
 
 (require 'bind-key)
 (bind-key "C-c t l" 'linum-mode)
