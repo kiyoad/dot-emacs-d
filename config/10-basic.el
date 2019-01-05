@@ -16,8 +16,8 @@
 (when (eq window-system 'x)
   ;;(setq-default line-spacing 3)
   ;;(set-face-attribute 'default nil :family "Ricty Diminished" :height 100)
-  (set-face-attribute 'default nil :family "Ricty Diminished" :height 115)
-  (set-fontset-font nil 'japanese-jisx0208 (font-spec :family "Ricty Diminished" )))
+  (set-face-attribute 'default nil :family "Ricty Diminished Discord" :height 115)
+  (set-fontset-font nil 'japanese-jisx0208 (font-spec :family "Ricty Diminished Discord" )))
 
 (require 'bind-key)
 (bind-key "C-z" 'scroll-down)
