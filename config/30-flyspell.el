@@ -12,6 +12,8 @@
 
 ;; ~/.aspell.conf に "lang en_US" を書いておく。
 
+;; 正しい候補は M-$ で確認する。
+
 (require 'ispell)
 (eval-after-load "ispell"
   '(add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
@@ -20,5 +22,7 @@
 
 (require 'bind-key)
 (bind-key "C-c t a" 'flyspell-mode)
+
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
 ;;; 30-flyspell.el ends here
