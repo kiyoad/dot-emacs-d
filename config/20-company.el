@@ -9,7 +9,7 @@
 (setq company-lighter-base "c_y")
 
 (require 'bind-key)
-(bind-key "C-M-i" 'company-complete)
+(bind-key* "C-M-i" 'company-complete)
 
 (defun my-company-abort-space ()
   "My company-abort and insert space."
