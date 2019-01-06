@@ -14,10 +14,6 @@
 (with-eval-after-load 'go-mode
   (bind-key "C-c C-a" 'helm-go-package go-mode-map))
 
-(require 'lsp-clients)
-(setq lsp-clients-go-library-directories "/usr/local/go")
-(add-hook 'go-mode-hook #'lsp)
-
 (require 'direx)
 (require 'go-direx) ; github.com/jstemmer/gotags
 (with-eval-after-load 'go-mode
@@ -31,6 +27,8 @@
           '(lambda ()    ; use golang.org/x/tools/cmd/goimports
              (setq gofmt-command "goimports")
              (add-hook 'before-save-hook 'gofmt-before-save)))
+
+(add-hook 'go-mode-hook #'lsp)
 
 (provide '40-go-mode)
 ;;; 40-go-mode.el ends here
