@@ -1,4 +1,7 @@
-;;-*- coding: utf-8 -*-
+;;; Package --- summary
+;;; -*- coding: utf-8 -*-
+;;; Commentary:
+;;; Code:
 
 (require 'bind-key)
 (require 'fill-column-indicator)
@@ -9,5 +12,8 @@
 
 (add-hook 'python-mode-hook
           '(lambda ()
-             (setq fci-rule-column 80)
+             (setq fci-rule-column 78)
              (fci-mode 1)))
+
+(provide '30-fci-mode)
+;;; 30-fci-mode.el ends here
