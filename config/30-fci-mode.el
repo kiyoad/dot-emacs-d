@@ -12,7 +12,7 @@
 
 (add-hook 'python-mode-hook
           '(lambda ()
-             (setq fci-rule-column 78)
+             (setq fci-rule-column 79)
              (fci-mode 1)))
 
 (provide '30-fci-mode)
