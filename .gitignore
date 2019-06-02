@@ -29,6 +29,9 @@ ido.last
 projectile-bookmarks.eld
 projectile.cache
 games/
+.lsp-session-v1
+transient/
+site-lisp/git-complete/
 
 # Compiled
 *.elc
