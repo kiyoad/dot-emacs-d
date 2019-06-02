@@ -32,7 +32,7 @@
   (bm-toggle)
   (when (eq last-command 'bm-toggle-or-helm)
     (helm-bm)))
-(bind-key "M-\\" 'bm-toggle-or-helm)
+(bind-key "M-g M-\\" 'bm-toggle-or-helm)
 
 (provide '30-bm)
 ;;; 30-bm.el ends here
