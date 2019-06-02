@@ -7,6 +7,7 @@
 (setq company-auto-complete t)
 (setq company-selection-wrap-around t)
 (setq company-lighter-base "c_y")
+(setq company-clang-executable "/usr/bin/clang-7")
 
 (require 'bind-key)
 (bind-key* "C-M-i" 'company-complete)
