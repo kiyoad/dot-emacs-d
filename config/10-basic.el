@@ -18,7 +18,10 @@
   (create-fontset-from-fontset-spec "-PfEd-Ricty Diminished Discord-*-*-*-*-*-*-*-*-*-0-fontset-rdd")
   (set-fontset-font "fontset-rdd" 'unicode (font-spec :family "Ricty Diminished Discord"))
   (add-to-list 'default-frame-alist '(font . "fontset-rdd"))
-  (set-frame-font "fontset-rdd" nil t))
+  (set-frame-font "fontset-rdd" nil t)
+  (add-to-list 'window-setup-hook
+               (lambda ()
+                 (set-face-attribute 'default nil :height 101))))
 
 (require 'bind-key)
 (bind-key "C-z" 'scroll-down)
