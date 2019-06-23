@@ -13,6 +13,7 @@
 (setq lsp-ui-peek-always-show t)
 (setq lsp-ui-doc-header t)
 (setq lsp-ui-doc-include-signature t)
+(setq lsp-auto-guess-root t)
 
 (provide '30-lsp-mode)
 ;;; 30-lsp-mode.el ends here
