@@ -4,7 +4,7 @@
 ;;; Code:
 
 (require 'ccls)
-(setq ccls-args '("--init={\"index\": {\"initialBlacklist\": [\".\"], \"threads\": 0}}"))
+(setq ccls-args '("--init={\"index\": {\"initialBlacklist\": [\".\"], \"threads\": 0}}" "--log-file=/tmp/ccls.log" "-v=1"))
 (setq ccls-sem-highlight-method 'font-lock)
 (ccls-use-default-rainbow-sem-highlight)
 
