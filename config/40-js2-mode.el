@@ -15,7 +15,7 @@
           '(lambda ()
              (ggtags-mode 1)))
 
-(add-hook 'js2-mode-hook #'lsp)
+(add-hook 'js2-mode-hook #'lsp-deferred)
 
 (provide '40-js2-mode)
 ;;; 40-js2-mode.el ends here

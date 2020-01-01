@@ -16,9 +16,9 @@
 ;; xrdp. Therefore, when enabling folder redirection, it is
 ;; recommended to enable lsp-mode manually.
 
-(add-hook 'c-mode-hook #'lsp)
-(add-hook 'c++-mode-hook #'lsp)
-(add-hook 'objc-mode-hook #'lsp)
+(add-hook 'c-mode-hook #'lsp-deferred)
+(add-hook 'c++-mode-hook #'lsp-deferred)
+(add-hook 'objc-mode-hook #'lsp-deferred)
 
 (provide '40-c-mode.el)
 ;;; 40-c-mode.el ends here

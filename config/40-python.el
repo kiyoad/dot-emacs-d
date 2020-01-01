@@ -3,7 +3,7 @@
 ;;; Commentary:
 ;;; Code:
 
-(add-hook 'python-mode-hook #'lsp)
+(add-hook 'python-mode-hook #'lsp-deferred)
 
 (setq python-shell-interpreter "python3" )
 

@@ -12,8 +12,8 @@
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 
 ;; (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-(add-hook 'mhtml-mode-hook #'lsp)
-(add-hook 'css-mode-hook #'lsp)
+(add-hook 'mhtml-mode-hook #'lsp-deferred)
+(add-hook 'css-mode-hook #'lsp-deferred)
 
 (provide '40-web-mode)
 ;;; 40-web-mode.el ends here
