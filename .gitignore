@@ -32,6 +32,8 @@ games/
 .lsp-session-v1
 transient/
 site-lisp/git-complete/
+lsp-cache/
+.log/
 
 # Compiled
 *.elc
