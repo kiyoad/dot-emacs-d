@@ -15,7 +15,7 @@
   (bind-key "C-c C-a" 'helm-go-package go-mode-map))
 
 (require 'direx)
-(require 'go-direx) ; github.com/jstemmer/gotags
+(require 'go-direx)
 (with-eval-after-load 'go-mode
   (bind-key "C-c C-j" 'go-direx-pop-to-buffer go-mode-map))
 (require 'popwin)
@@ -23,12 +23,7 @@
         :dedicated t :stick t)
       popwin:special-display-config)
 
-(add-hook 'go-mode-hook
-          '(lambda ()    ; use golang.org/x/tools/cmd/goimports
-             (setq gofmt-command "goimports")
-             (add-hook 'before-save-hook 'gofmt-before-save)))
-
-(add-hook 'go-mode-hook #'lsp)
+(add-hook 'go-mode-hook #'lsp-deferred)
 
 (provide '40-go-mode)
 ;;; 40-go-mode.el ends here
