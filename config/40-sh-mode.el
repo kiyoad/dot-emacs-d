@@ -3,6 +3,7 @@
 ;;; Commentary:
 ;;; Code:
 
+(add-to-list 'lsp-language-id-configuration '(sh-mode . "bash"))
 (add-hook 'sh-mode-hook #'lsp-deferred)
 
 (provide '40-sh-mode)
