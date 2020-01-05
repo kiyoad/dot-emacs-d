@@ -26,5 +26,10 @@
 ;; check-syntax:
 ;; 	$(CC) $(CFLAGS) $(ALL_INCS) -Wall -Wextra -fsyntax-only $(CHK_SOURCES)
 
+(require 'bind-key)
+(bind-key "C-c l h m" 'ccls-member-hierarchy lsp-mode-map)
+(bind-key "C-c l h c" 'ccls-call-hierarchy lsp-mode-map)
+(bind-key "C-c l h i" 'ccls-inheritance-hierarchy lsp-mode-map)
+
 (provide '40-c-mode.el)
 ;;; 40-c-mode.el ends here

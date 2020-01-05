@@ -10,13 +10,14 @@
 (setq lsp-auto-guess-root t)
 (setq lsp-document-sync-method lsp--sync-incremental)
 (setq lsp-response-timeout 5)
-
 (setq lsp-ui-peek-always-show t)
+
+(setq lsp-ui-doc-enable t)
 (setq lsp-ui-doc-header t)
 (setq lsp-ui-doc-include-signature t)
 (setq lsp-ui-doc-position 'top)
 
-(setq lsp-ui-sideline-enable nil)
+(setq lsp-ui-sideline-enable t)
 (setq lsp-ui-sideline-ignore-duplicate t)
 (setq lsp-ui-sideline-show-hover t)
 (setq lsp-ui-sideline-show-diagnostics nil)
