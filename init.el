@@ -32,14 +32,17 @@
 
 (add-to-list 'load-path (locate-user-emacs-file "site-lisp"))
 
-(require 'doom-themes)
-(require 'doom-modeline)
-(load-theme 'doom-dracula t)
-(setq doom-modeline-buffer-file-name-style 'truncate-upto-project)
-(setq doom-modeline-icon nil)
-(setq doom-modeline-major-mode-icon nil)
-(setq doom-modeline-minor-modes nil)
-(add-hook 'after-init-hook #'doom-modeline-mode)
+(if (eq window-system 'x)
+    (progn
+      (require 'doom-themes)
+      (require 'doom-modeline)
+      (load-theme 'doom-dracula t)
+      (setq doom-modeline-buffer-file-name-style 'truncate-upto-project)
+      (setq doom-modeline-icon nil)
+      (setq doom-modeline-major-mode-icon nil)
+      (setq doom-modeline-minor-modes nil)
+      (add-hook 'after-init-hook #'doom-modeline-mode))
+  (load-theme 'misterioso))
 
 (require 'exec-path-from-shell)
 (exec-path-from-shell-initialize)
