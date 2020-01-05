@@ -1,8 +1,7 @@
-;;-*- coding: utf-8 -*-
-
-(defface my-ipa-highlight '((t)) "IPA mode highlight")
-(set-face-foreground 'my-ipa-highlight (my-flatui-color "clouds"))
-(set-face-background 'my-ipa-highlight (my-flatui-color "midnight-blue"))
+;;; Package --- summary
+;;; -*- coding: utf-8 -*-
+;;; Commentary:
+;;; Code:
 
 (require 'bind-key)
 (require 'ipa)
@@ -27,3 +26,6 @@
   (bind-key "C-m" 'ipa-move-finish ipa-overriding-map)
   (bind-key "C-c" 'ipa-move-cancel ipa-overriding-map)
   (bind-key "h"   'ipa-move-help ipa-overriding-map))
+
+(provide '30-ipa)
+;;; 30-ipa.el ends here

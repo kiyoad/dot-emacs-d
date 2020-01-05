@@ -1,4 +1,7 @@
-;;-*- coding: utf-8 -*-
+;;; Package --- summary
+;;; -*- coding: utf-8 -*-
+;;; Commentary:
+;;; Code:
 
 ;; You can use package-selected-packages to (re)install packages on other machines
 ;; by running 'package-refresh-contents' and 'package-install-selected-packages'.
@@ -16,36 +19,27 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ccls dap-mode helm-lsp lsp-treemacs php-mode nginx-mode lsp-ui company-lsp lsp-mode git-gutter+ git-gutter-fringe+ rainbow-delimiters color-identifiers-mode dumb-jump swiper ivy flycheck-popup-tip undo-tree eldoc-overlay expand-region trr typit symbol-overlay ace-window origami mwim multiple-cursors goto-chg linum-relative ibuffer-projectile helm-projectile projectile jaword ido-skk focus company elscreen helm-elscreen markdown-toc yasnippet-snippets js2-mode web-mode visual-regexp flatui-theme adoc-mode ansible avy ddskk scratch-pop japanese-holidays bm helm smart-cursor-color prompt-text ietf-docs hiwin go-direx direx helm-go-package mo-git-blame bbyac helm-c-yasnippet browse-kill-ring color-moccur dockerfile-mode fill-column-indicator fold-dwim go-mode google-translate helm-ag helm-google ido-vertical-mode json-mode lispxmp magit markdown-mode migemo pangu-spacing popwin recentf-ext shell-pop smart-newline smart-tab smartparens smex which-key yaml-mode zop-to-char yasnippet shrink-whitespace persp-mode isearch-dabbrev init-loader helm-bm exec-path-from-shell easy-kill bind-key auto-async-byte-compile))))
+    (doom-modeline doom-themes ccls dap-mode helm-lsp lsp-treemacs php-mode nginx-mode lsp-ui company-lsp lsp-mode git-gutter+ git-gutter-fringe+ rainbow-delimiters color-identifiers-mode dumb-jump swiper ivy flycheck-popup-tip undo-tree eldoc-overlay expand-region trr typit symbol-overlay ace-window origami mwim multiple-cursors goto-chg linum-relative ibuffer-projectile helm-projectile projectile jaword ido-skk focus company elscreen helm-elscreen markdown-toc yasnippet-snippets js2-mode web-mode visual-regexp adoc-mode ansible avy ddskk scratch-pop japanese-holidays bm helm smart-cursor-color prompt-text ietf-docs hiwin go-direx direx helm-go-package mo-git-blame bbyac helm-c-yasnippet browse-kill-ring color-moccur dockerfile-mode fill-column-indicator fold-dwim go-mode google-translate helm-ag helm-google ido-vertical-mode json-mode lispxmp magit markdown-mode migemo pangu-spacing popwin recentf-ext shell-pop smart-newline smart-tab smartparens smex which-key yaml-mode zop-to-char yasnippet shrink-whitespace persp-mode isearch-dabbrev init-loader helm-bm exec-path-from-shell easy-kill bind-key auto-async-byte-compile))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(elscreen-tab-background-face ((t (:background "white" :foreground "black" :underline t))))
- '(elscreen-tab-current-screen-face ((t (:background "color-255" :foreground "black"))))
- '(elscreen-tab-other-screen-face ((t (:background "white" :foreground "black" :underline t))))
- '(flycheck-error ((t (:background "color-219" :foreground "black" :underline t))))
- '(flycheck-info ((t (:background "color-51" :foreground "black" :underline t))))
- '(flycheck-warning ((t (:background "color-226" :foreground "black" :underline t))))
- '(ggtags-global-line ((t (:background "brightwhite"))))
- '(highlight-symbol-face ((t (:background "#0000FF"))))
- '(magit-diff-added ((t (:background "#cceecc" :foreground "#22aa22"))))
- '(magit-diff-added-highlight ((t (:background "#ddffdd" :foreground "#22aa22"))))
- '(magit-diff-removed ((t (:background "#eecccc" :foreground "#aa2222"))))
- '(magit-diff-removed-highlight ((t (:background "#ffdddd" :foreground "#aa2222")))))
-
+ )
 
 (when load-file-name
   (setq user-emacs-directory (file-name-directory load-file-name)))
 
 (add-to-list 'load-path (locate-user-emacs-file "site-lisp"))
 
-;; http://flatuicolors.com/
-(load-theme 'flatui t)
-(defun my-flatui-color (name)
-  (cdr (assoc name flatui-colors-alist)))
-(set-face-background 'mode-line (my-flatui-color "sun-flower"))
+(require 'doom-themes)
+(require 'doom-modeline)
+(load-theme 'doom-dracula t)
+(setq doom-modeline-buffer-file-name-style 'truncate-upto-project)
+(setq doom-modeline-icon nil)
+(setq doom-modeline-major-mode-icon nil)
+(setq doom-modeline-minor-modes nil)
+(add-hook 'after-init-hook #'doom-modeline-mode)
 
 (require 'exec-path-from-shell)
 (exec-path-from-shell-initialize)
@@ -57,3 +51,6 @@
 
 (require 'init-loader)
 (init-loader-load (concat user-emacs-directory "config"))
+
+(provide 'init)
+;;; init.el ends here

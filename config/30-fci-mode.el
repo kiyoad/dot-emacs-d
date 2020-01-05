@@ -7,8 +7,7 @@
 (require 'fill-column-indicator)
 (bind-key "C-c t f" 'fci-mode)
 (with-eval-after-load 'fill-column-indicator
-  (setq fci-rule-character ?!)
-  (setq fci-rule-color (my-flatui-color "asbestos")))
+  (setq fci-rule-character ?!))
 
 (add-hook 'python-mode-hook
           '(lambda ()
