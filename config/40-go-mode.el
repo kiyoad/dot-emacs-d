@@ -6,7 +6,7 @@
 (require 'go-mode)
 (add-hook 'go-mode-hook
           '(lambda ()
-             (ggtags-mode 1)
+             (gtags-mode 1)
              (setq tab-width 4)))
 
 (require 'bind-key)

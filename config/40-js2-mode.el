@@ -13,7 +13,7 @@
 
 (add-hook 'js2-mode-hook
           '(lambda ()
-             (ggtags-mode 1)))
+             (gtags-mode 1)))
 
 (add-hook 'js2-mode-hook #'lsp-deferred)
 
