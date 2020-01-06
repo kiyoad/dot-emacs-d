@@ -12,8 +12,11 @@
 (setq company-clang-executable "/usr/bin/clang-8")
 (add-hook 'c-mode-common-hook
           (lambda ()
-            (flycheck-mode -1)
-            (lsp-deferred)))
+            (when (derived-mode-p 'c-mode 'c++-mode 'objc-mode 'cuda-mode)
+              (flycheck-mode -1)
+              (lsp-deferred))
+            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
+              (gtags-mode 1))))
 
 ;; flycheck を使う場合は以下を有効にする。
 ;; (setq lsp-prefer-flymake nil)

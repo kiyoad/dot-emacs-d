@@ -7,5 +7,10 @@
 
 (setq python-shell-interpreter "python3" )
 
+(add-hook 'python-mode-hook
+          '(lambda ()
+             (gtags-mode 1)
+             (setq tab-width 4)))
+
 (provide '40-python.el)
 ;;; 40-python.el ends here
