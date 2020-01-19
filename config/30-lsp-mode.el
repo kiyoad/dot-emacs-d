@@ -12,6 +12,7 @@
 (setq lsp-response-timeout 5)
 (setq lsp-ui-peek-always-show t)
 
+(setq lsp-ui-doc-use-webkit t)
 (setq lsp-ui-doc-enable t)
 (setq lsp-ui-doc-header t)
 (setq lsp-ui-doc-include-signature t)
