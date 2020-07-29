@@ -1,13 +1,14 @@
-;;-*- coding: utf-8 -*-
-
-(require 'helm)
-
-(setq recentf-max-saved-items 512)
-(require 'recentf-ext)
+;;; Package --- summary
+;;; -*- coding: utf-8 -*-
+;;; Commentary:
+;;; Code:
 
 (require 'helm)
 (require 'helm-config)
 (require 'helm-files)
+
+(setq recentf-max-saved-items 512)
+(require 'recentf-ext)
 
 (require 'bind-key)
 (bind-key "C-x C-z" 'helm-resume)
@@ -16,6 +17,8 @@
 (bind-key "M-y"     'helm-show-kill-ring)
 (bind-key "C-x b"   'helm-multi-files)
 (bind-key "C-c C-<SPC>" 'helm-all-mark-rings)
+
+(bind-key "C-z" 'helm-previous-page helm-map)
 
 (defun my-switch-to-buffer-other-window ()
   (interactive)
@@ -29,3 +32,6 @@
               (helm-multi-files))
       (set-window-configuration config))))
 (bind-key "C-x 4 b" 'my-switch-to-buffer-other-window)
+
+(provide '20-helm)
+;;; 20-helm.el ends here
