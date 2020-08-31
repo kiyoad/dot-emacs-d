@@ -33,5 +33,7 @@
       (set-window-configuration config))))
 (bind-key "C-x 4 b" 'my-switch-to-buffer-other-window)
 
+(helm-mode 1)
+
 (provide '20-helm)
 ;;; 20-helm.el ends here
