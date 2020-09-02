@@ -23,5 +23,9 @@
   (bind-key "M-," 'gtags-pop-stack gtags-mode-map)
   (bind-key "M-," 'gtags-pop-stack gtags-select-mode-map))
 
+(add-to-list 'helm-completing-read-handlers-alist '(gtags-find-tag . nil))
+(add-to-list 'helm-completing-read-handlers-alist '(gtags-find-rtag  . nil))
+(add-to-list 'helm-completing-read-handlers-alist '(gtags-find-symbol . nil))
+
 (provide '30-gtags)
 ;;; 30-gtags.el ends here
