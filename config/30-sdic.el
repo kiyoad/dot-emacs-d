@@ -3,7 +3,6 @@
 ;;; Commentary:
 ;;; Code:
 
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/sdic")
 (setq default-fill-column fill-column)
 (require 'sdic)
 
