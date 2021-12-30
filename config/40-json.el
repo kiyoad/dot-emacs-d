@@ -4,7 +4,7 @@
 ;;; Code:
 
 (require 'json-mode)
-(require 'json-reformat)
+;; (require 'json-reformat)
 (add-hook 'json-mode-hook #'lsp-deferred)
 
 (provide '40-json)
