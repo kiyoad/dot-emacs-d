@@ -34,6 +34,7 @@ transient/
 site-lisp/git-complete/
 lsp-cache/
 .log/
+.dap-breakpoints
 
 # Compiled
 *.elc
